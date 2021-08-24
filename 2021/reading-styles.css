@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+body {
+/*	background-color: #BFD3C1;*/
+	background-color: #D85F43;
+	color: antiquewhite;
+}
+
+a, a:hover {
+	color: antiquewhite;
+	width: max-content;
+	max-width: 100%;
+}
+
+a p {
+	display: inline;
+}
+
+.right a {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.left a {
+	display: flex;
+	justify-content: flex-start;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	white-space: nowrap;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.left p:hover::after {
+	content: " ↗";
+}
+
+.right p:hover::before {
+	content: "↖ ";
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+.ticker {
+	height: 36vh;
+	display: flex;
+	width: calc(100% - 2em);
+	margin: 1em;
+	overflow: hidden;
+}
+
+.ticker img {
+	width: 20vh;
+	height: 30vh;
+	object-fit: cover;
+	object-position: 50%;
+	margin: 0 1vw 0 0;
+	transition-property: all;
+	transition-duration: 0.45s;
+}
+
+.ticker img:hover {
+	width: 24vh;
+	height: 36vh;
+	transition-property: all;
+	transition-duration: 0.45s;
+}
+
+.ticker-content {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	margin: 0;
+	animation: marquee 60s linear infinite;
+}
+
+.ticker-content:hover {
+	animation-play-state: paused;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0%);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.books {
+	display: flex;
+	margin: 1em;
+	margin-top: 0;
+	height: calc(64vh - 6em);
+	overflow: scroll;
+}
+
+.book-heading {
+	display: flex;
+	margin: 1em;
+	margin-top: 0;
+}
+
+.titles p, .heading p, .menu p {
+	text-align: center;
+	font-size: 0.75em;
+	margin: 0;
+	padding: 0;
+}
+
+.heading p {
+	position: fixed;
+	background-color: #D85F43;
+	z-index: 3;
+}
+
+.menu {
+	top: 1em;
+	height: 2em;
+	margin-bottom: 1em;
+}
+
+.left.menu p {
+	text-align: left;
+}
+
+.left.menu a, .left a {
+	float: left;
+	clear: both;
+}
+
+.middle.menu h1 {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	line-height: 0.8em;
+}
+
+.right.menu p {
+	text-align: right;
+}
+
+.right.menu a, .right a {
+	float: right;
+	clear: both;
+}
+
+p.background {
+	width: calc(100vw - 2em);
+	background-color: #D85F43;
+	z-index: 1;
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+}
+
+.titles {
+	margin: 0;
+	padding: 0;
+}
+
+.top {
+	margin-top: 1em;
+}
+
+hr {
+	position: fixed;
+	background-color: antiquewhite;
+	margin: 0.5em 0 -0.5em;
+	width: calc(100vw - 2em);
+	padding: 0;
+	z-index: 2;
+}
+
+@media (min-width: 576px) {
+	p.background {
+		width: calc((100vw - 2em) / 4);
+	}
+	
+	.titles {
+		margin-top: 1em;
+	}
+}

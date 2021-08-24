@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	animation: fadein 1s ease;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.hr-container {
+	display: flex;
+	height: 1px;
+	top: -1em;
+}
+
+hr {
+	background-color: black;
+	display: flex;
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	animation: hr-extend 1s ease;
+}
+
+@keyframes hr-extend {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.container-fluid.main {
+	display: flex;
+	margin: 1em;
+	width: calc(100vw - 2em);
+	height: calc(100vh - 2em);
+	justify-content: center;
+	align-items: center;
+}
+
+.vl-container {
+	margin: 5vw;
+	height: 0;
+}
+
+.vl {
+	transition: ease 0.5s;
+	display: flex;
+	bottom: 10vh;
+	border-width: thin;
+	width: 50%;
+	height: 10vh;
+	justify-content: center;
+	border-right-style: solid;
+}
+
+.vl-container:hover>.vl {
+	transition: ease 0.5s;
+	height: 11vh;
+	bottom: 11vh;
+}
+
+.vl a {
+	transition: ease 0.5s;
+	bottom: 10vh;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+.vl-container:hover>.vl a {
+	transition: ease 0.5s;
+	bottom: 11vh;
+}
+
+.vl-container:nth-of-type(even) .vl {
+	transition: ease 0.5s;
+	bottom: 0;
+	top: 0;
+}
+
+.vl-container:nth-of-type(even) .vl a {
+	transition: ease 0.5s;
+	bottom: 0;
+	top: 10vh;
+}
+
+.vl-container:nth-of-type(even):hover>.vl a {
+	transition: ease 0.5s;
+	top: 11vh;
+}
+
+a {
+	display: inline;
+	position: fixed;
+	width: max-content;
+	z-index: 5;
+}
+
+a h1 {
+	max-width: max-content;
+	display: inline;
+	position: fixed;
+}
+
+.left {
+	left: 0;
+	display: flex;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+.right {
+	right: 0;
+	display: flex;
+	text-align: right;
+	float: right;
+	clear: both;
+}
+
+.bottom a h1 {
+	bottom: -.2em;
+}
+
+h1.left:hover::after {
+	content: " ↗";
+}
+
+h1.right:hover::before {
+	content: "↖ ";
+}
