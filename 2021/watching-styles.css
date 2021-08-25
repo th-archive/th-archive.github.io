@@ -106,7 +106,7 @@ p, .legend {
 /*	height: min(calc(100vw - 3.7em), calc(100vh - 8.75em));*/
 	height: 1.5em;
 	width: min(calc(100vw - 5.25em), calc(100vh - 10.5em));
-	position: fixed;
+	position: absolute;
 }
 
 @keyframes marquee {
@@ -117,35 +117,6 @@ p, .legend {
 	to {
 		transform: translateX(-50%);
 	}
-}
-
-img {
-	max-width: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
-	max-height: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
-}
-
-.img-container {
-	z-index: -5;
-	top: 2em;
-	height: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
-	overflow: hidden;
-	position: fixed;
-	width: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
-	justify-content: center;
-	align-items: center;
-	display: flex;
-}
-
-.left .img-container {
-	left: 2em;
-}
-
-a>div.img-container {
-	display: none;
-}
-
-a:hover>div.img-container {
-	display: flex;
 }
 
 a p {
@@ -207,6 +178,35 @@ a p {
 	padding: 0.5em;
 	height: calc(100vh - 5em);
 	position: absolute;
+	display: flex;
+}
+
+img {
+	max-width: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
+	max-height: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
+}
+
+.img-container {
+	z-index: -5;
+	overflow: hidden;
+	position: fixed;
+	width: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	top: 2em;
+	height: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
+}
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+	top: 6.9em;
+}
+
+a>div.img-container {
+	display: none;
+}
+
+a:hover>div.img-container {
 	display: flex;
 }
 
