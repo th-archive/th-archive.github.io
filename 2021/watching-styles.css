@@ -205,13 +205,13 @@ img {
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	top: 0;
+	bottom: 0;
 	height: 100%;
 }
 
 _::-webkit-full-page-media, _:future, :root .safari_only {
 	height: calc(100% - 5em);
-	top: 4em;
+	bottom: 1em;
 }
 
 a>div.img-container {
