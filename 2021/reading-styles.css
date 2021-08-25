@@ -176,6 +176,7 @@ p.background {
 }
 
 .heading {
+	top: -1px;
 	display: flex;
 	justify-content: center;
 }
