@@ -12,12 +12,14 @@
 
 html {
 	height: -webkit-fill-available;
+	overflow: hidden;
 }
 
 body {
 /*	background-color: #BFD3C1;*/
 	background-color: lightgoldenrodyellow;
 	color: royalblue;
+	position: relative;
 	max-height: 100vh;
 	max-height: -webkit-fill-available;
 }
