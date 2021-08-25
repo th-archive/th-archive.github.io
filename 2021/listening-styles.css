@@ -10,10 +10,16 @@
 	scrollbar-width: none;
 }
 
+html {
+	height: -webkit-fill-available;
+}
+
 body {
 	background-color: #BFD3C1;
 /*	background-color: lavender; */
 	color: #A50038;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
 }
 
 a, a:hover {
