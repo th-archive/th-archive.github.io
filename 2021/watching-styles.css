@@ -19,6 +19,7 @@ body {
 	background-color: lightgoldenrodyellow;
 	color: royalblue;
 	max-height: 100vh;
+	background-color: pink;
 	max-height: -webkit-fill-available;
 }
 
