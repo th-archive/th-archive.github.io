@@ -194,12 +194,12 @@ img {
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	top: 2em;
-	height: min(calc(100vw - 6.5em), calc(100vh - 10.5em));
+	top: 0;
+	height: 100%;
 }
 
 _::-webkit-full-page-media, _:future, :root .safari_only {
-	top: 6.9em;
+	top: 1.5em;
 }
 
 a>div.img-container {
