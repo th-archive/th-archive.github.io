@@ -154,8 +154,14 @@ a h1 {
 	clear: both;
 }
 
+.top a h1 {
+	top: 0;
+	height: 1em;
+}
+
 .bottom a h1 {
-	bottom: -0.6em;
+	top: calc(100vh - 1em);
+	height: 1em;
 }
 
 h1.left:hover::after {
