@@ -182,6 +182,7 @@ a p {
 	width: min(calc(100vw - 2.7em), calc(100vh - 6.7em));
 	transform: scale(100%);
 	position: fixed;
+	background-color: pink;
 }
 
 .box {
@@ -191,6 +192,8 @@ a p {
 	height: calc(100vh - 5em);
 	position: fixed;
 	display: flex;
+	background-color: blue;
+	top: 4em;
 }
 
 img {
