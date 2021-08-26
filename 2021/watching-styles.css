@@ -212,7 +212,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 a>div.img-container {
-/*	display: none;*/
+	display: none;
 }
 
 a:hover>div.img-container {
