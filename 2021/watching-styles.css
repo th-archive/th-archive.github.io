@@ -181,6 +181,7 @@ a p {
 	height: min(calc(100vw - 2.7em), calc(100vh - 6.7em));
 	width: min(calc(100vw - 2.7em), calc(100vh - 6.7em));
 	transform: scale(100%);
+	position: fixed;
 }
 
 .box {
@@ -188,7 +189,7 @@ a p {
 	width: calc(100vw - 2em);
 	align-items: center;
 	height: calc(100vh - 5em);
-	position: absolute;
+	position: fixed;
 	display: flex;
 }
 
