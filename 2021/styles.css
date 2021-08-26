@@ -18,6 +18,7 @@ body {
 	color: black;
 	max-height: 100vh;
 	max-height: -webkit-fill-available;
+	transform: translateX(0);
 }
 
 html {
@@ -99,25 +100,11 @@ a p {
 	margin-bottom: 0em;
 }
 
-.left p:hover::after, .middle-left p:hover::after {
+.left p:hover::after, .middle-right p:hover::after {
 	content: " ↗ ";
 }
 
-.right p:hover::before, .middle-right p:hover::before {
-	content: " ↖ ";
-}
-
-.middle-left p:hover::before {
-	color: transparent;
-	cursor: default;
-	user-select: none;
-	content: " ↗ ";
-}
-
-.middle-right p:hover::after {
-	color: transparent;
-	cursor: default;
-	user-select: none;
+.right p:hover::before, .middle-left p:hover::before {
 	content: " ↖ ";
 }
 
@@ -129,11 +116,6 @@ a p {
 .left a {
 	display: flex;
 	justify-content: flex-start;
-}
-
-.middle a, a.middle {
-	display: flex;
-	justify-content: center;
 }
 
 h1 {
@@ -191,19 +173,82 @@ a.right {
 
 .middle-left {
 	display: flex;
-	justify-content: center;
-	text-align: center;
-	left: calc((-25% / 4) * 0.5);
+	justify-content: flex-end;
+	text-align: right;
+	right: 0;
 }
 
 .middle-right {
 	display: flex;
-	justify-content: center;
-	text-align: center;
-	left: calc((25% / 4) * 0.5);
+	justify-content: flex-start;
+	text-align: left;
+	left: 0;
 }
 
 .middle.menu a, .middle a {
 	float: left;
+	line-height: 1em;
+	height: 1em;
+	top: -0.25vh;
 	clear: both;
+}
+
+@media (min-width: 576px) {
+	.menu p {
+		white-space: nowrap;
+	}
+	
+	.middle.menu p {
+		text-align: center;
+	}
+
+	.middle-left {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		left: calc((-25% / 4) * 0.5);
+	}
+
+	.middle-right {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		left: calc((25% / 4) * 0.5);
+	}
+
+	.middle.menu a, .middle a {
+		float: left;
+		clear: both;
+	}
+	
+	.middle a, a.middle {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.middle.menu a, .middle a {
+		top: 0;
+	}
+	
+	.middle-left p:hover::after {
+		content: " ↗ ";
+	}
+
+	.middle-right p:hover::before {
+		content: " ↖ ";
+	}
+	
+	.middle-left p:hover::before {
+		color: transparent;
+		cursor: default;
+		user-select: none;
+		content: " ↗ ";
+	}
+
+	.middle-right p:hover::after {
+		color: transparent;
+		cursor: default;
+		user-select: none;
+		content: " ↖ ";
+	}
 }
