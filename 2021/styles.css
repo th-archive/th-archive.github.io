@@ -22,6 +22,7 @@ body {
 
 html {
 	height: -webkit-fill-available;
+	overflow: hidden;
 }
 
 a, a:hover {
