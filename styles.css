@@ -155,7 +155,7 @@ a h1 {
 }
 
 .bottom a h1 {
-	bottom: -.2em;
+	bottom: -0.6em;
 }
 
 h1.left:hover::after {
