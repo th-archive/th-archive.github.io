@@ -19,7 +19,9 @@ body {
 /*	background-color: #BFD3C1;*/
 	background-color: lightgoldenrodyellow;
 	color: royalblue;
-	position: relative;
+	position: fixed;
+	top: 0;
+	bottom: 0;
 	max-height: 100vh;
 }
 
