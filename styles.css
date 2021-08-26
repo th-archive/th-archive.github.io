@@ -160,7 +160,7 @@ a h1 {
 }
 
 .bottom a h1 {
-	top: calc(100vh - 1em);
+	bottom: -2.5vh;
 	height: 1em;
 }
 
