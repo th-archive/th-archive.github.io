@@ -161,6 +161,11 @@ a:hover {
 	line-height: 0.8em;
 }
 
+div.middle.menu {
+	display: flex;
+	justify-content: center;
+}
+
 .right.menu p {
 	text-align: right;
 }
