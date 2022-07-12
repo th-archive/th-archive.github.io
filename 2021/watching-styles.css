@@ -206,9 +206,7 @@ img {
 }
 
 _::-webkit-full-page-media, _:future, :root .safari_only {
-	height: calc(100% - 5em);
 /*	bottom: 1em;*/
-	top: 5em;
 }
 
 a>div.img-container {
