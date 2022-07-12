@@ -1,0 +1,753 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+html {
+	height: -webkit-fill-available;
+	overflow: hidden;
+}
+
+body {
+	color: #FFC4C5;
+	background-color: cornflowerblue;
+	max-height: 100vh;
+	max-height: -webkit-fill-available;
+	transform: translateX(0);
+}
+
+a, a:hover {
+	color: #FFC4C5;
+	width: max-content;
+	max-width: 100%;
+}
+
+a p {
+	display: inline;
+}
+
+.right a {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.left a {
+	display: flex;
+	justify-content: flex-start;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	white-space: nowrap;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.left p:hover::after {
+	content: " ↗";
+}
+
+.right p:hover::before {
+	content: "↖ ";
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+.titles p, .heading p, .menu p {
+	text-align: center;
+	font-size: 0.75em;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 0.75em;
+	margin-top: 24%;
+	align-self: flex-start;
+}
+
+.col-12 h1 {
+	margin-right: 0.25em;
+	font-size: 2em;
+}
+
+.heading p {
+	position: fixed;
+	z-index: 3;
+}
+
+.menu {
+	top: 1em;
+	height: 2em;
+	margin-bottom: 1em;
+}
+
+.left.menu p {
+	text-align: left;
+}
+
+.left.menu a, .left a {
+	float: left;
+	clear: both;
+}
+
+.middle.menu h1 {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	line-height: 0.8em;
+}
+
+div.middle.menu {
+	display: flex;
+	justify-content: center;
+}
+
+.right.menu p {
+	text-align: right;
+}
+
+.right.menu a, .right a {
+	float: right;
+	clear: both;
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+}
+
+.top {
+	margin-top: 1em;
+}
+
+.container-fluid.main {
+	margin: 1em;
+	width: calc(100vw - 2em);
+	height: calc(100vh - 5em);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.col-12 {
+	margin: 0em;
+	height: calc(50vw - 1em);
+	max-width: calc(100vw - 2em);
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.row {
+	justify-content: center;
+}
+
+.main .row>div {
+	transition-duration: 0.5s;
+}
+
+.main .row:hover>div {
+	opacity: 0.25;
+	transition-duration: 0.5s;
+}
+
+.main .row:hover>div:hover {
+	opacity: 1;
+	transition-duration: 0.25s;
+}
+
+col-12 div  {
+	opacity: 0;
+	border-radius: 50%;
+	background-color: #FFC4C5;
+	transition-duration: 0.75s;
+	-moz-box-shadow: 30px #FFC4C5;
+	-webkit-box-shadow: 30px #FFC4C5;
+	box-shadow: 0 0 35px 35px #FFC4C5;
+}
+
+.col-12 {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.col-12:nth-of-type(1):hover {
+	background-image: url('cursor/1.jpeg');
+}
+
+.col-12:nth-of-type(2):hover {
+	background-image: url('cursor/2.jpeg');
+}
+
+.col-12:nth-of-type(3):hover {
+	background-image: url('cursor/3.jpeg');
+}
+
+.col-12:nth-of-type(4):hover {
+	background-image: url('cursor/4.jpeg');
+}
+
+.col-12:nth-of-type(5):hover {
+	background-image: url('cursor/5.jpeg');
+}
+
+.col-12:nth-of-type(6):hover {
+	background-image: url('cursor/6.jpeg');
+}
+
+.col-12:nth-of-type(7):hover {
+	background-image: url('cursor/7.jpeg');
+}
+
+.col-12:nth-of-type(8):hover {
+	background-image: url('cursor/8.jpeg');
+}
+
+.col-12:nth-of-type(9):hover {
+	background-image: url('cursor/9.jpeg');
+}
+
+.col-12:nth-of-type(10):hover {
+	background-image: url('cursor/10.jpeg');
+}
+
+.col-12:nth-of-type(11):hover {
+	background-image: url('cursor/11.jpeg');
+}
+
+.col-12:nth-of-type(12):hover {
+	background-image: url('cursor/12.jpeg');
+}
+
+.col-12:nth-of-type(13):hover {
+	background-image: url('cursor/13.jpeg');
+}
+
+.col-12:nth-of-type(14):hover {
+	background-image: url('cursor/14.jpeg');
+}
+
+.col-12:nth-of-type(15):hover {
+	background-image: url('cursor/15.jpeg');
+}
+
+.col-12:nth-of-type(16):hover {
+	background-image: url('cursor/16.jpeg');
+}
+
+.col-12:nth-of-type(17):hover {
+	background-image: url('cursor/17.jpeg');
+}
+
+.col-12:nth-of-type(18):hover {
+	background-image: url('cursor/18.jpeg');
+}
+
+.col-12:nth-of-type(19):hover {
+	background-image: url('cursor/19.jpeg');
+}
+
+.col-12:nth-of-type(20):hover {
+	background-image: url('cursor/20.jpeg');
+}
+
+.col-12:nth-of-type(21):hover {
+	background-image: url('cursor/21.jpeg');
+}
+
+.col-12:nth-of-type(22):hover {
+	background-image: url('cursor/22.jpeg');
+}
+
+.col-12:nth-of-type(23):hover {
+	background-image: url('cursor/23.jpeg');
+}
+
+.col-12:nth-of-type(24):hover {
+	background-image: url('cursor/24.jpeg');
+}
+
+.col-12:nth-of-type(25):hover {
+	background-image: url('cursor/25.jpeg');
+}
+
+.col-12:nth-of-type(26):hover {
+	background-image: url('cursor/26.jpeg');
+}
+
+.col-12:nth-of-type(27):hover {
+	background-image: url('cursor/27.jpeg');
+}
+
+.col-12:nth-of-type(28):hover {
+	background-image: url('cursor/28.jpeg');
+}
+
+.col-12:nth-of-type(29):hover {
+	background-image: url('cursor/29.jpeg');
+}
+
+.col-12:nth-of-type(30):hover {
+	background-image: url('cursor/30.jpeg');
+}
+
+.col-12:nth-of-type(31):hover {
+	background-image: url('cursor/31.jpeg');
+}
+
+.col-12:nth-of-type(32):hover {
+	background-image: url('cursor/32.jpeg');
+}
+
+.col-12:nth-of-type(33):hover {
+	background-image: url('cursor/33.jpeg');
+}
+
+.col-12:nth-of-type(34):hover {
+	background-image: url('cursor/34.jpeg');
+}
+
+.col-12:nth-of-type(35):hover {
+	background-image: url('cursor/35.jpeg');
+}
+
+.col-12:nth-of-type(36):hover {
+	background-image: url('cursor/36.jpeg');
+}
+
+.col-12:nth-of-type(37):hover {
+	background-image: url('cursor/37.jpeg');
+}
+
+.col-12:nth-of-type(38):hover {
+	background-image: url('cursor/38.jpeg');
+}
+
+.col-12:nth-of-type(39):hover {
+	background-image: url('cursor/39.jpeg');
+}
+
+.col-12:nth-of-type(40):hover {
+	background-image: url('cursor/40.jpeg');
+}
+
+.col-12:nth-of-type(41):hover {
+	background-image: url('cursor/41.jpeg');
+}
+
+.col-12:nth-of-type(42):hover {
+	background-image: url('cursor/42.jpeg');
+}
+
+.col-12:nth-of-type(43):hover {
+	background-image: url('cursor/43.jpeg');
+}
+
+.col-12:nth-of-type(44):hover {
+	background-image: url('cursor/44.jpeg');
+}
+
+.col-12:nth-of-type(45):hover {
+	background-image: url('cursor/45.jpeg');
+}
+
+.col-12:nth-of-type(46):hover {
+	background-image: url('cursor/46.jpeg');
+}
+
+.col-12:nth-of-type(47):hover {
+	background-image: url('cursor/47.jpeg');
+}
+
+.col-12:nth-of-type(48):hover {
+	background-image: url('cursor/48.jpeg');
+}
+
+.col-12:nth-of-type(49):hover {
+	background-image: url('cursor/49.jpeg');
+}
+
+.col-12:nth-of-type(50):hover {
+	background-image: url('cursor/50.jpeg');
+}
+
+.col-12:nth-of-type(51):hover {
+	background-image: url('cursor/51.jpeg');
+}
+
+.col-12:nth-of-type(52):hover {
+	background-image: url('cursor/52.jpeg');
+}
+
+.col-12:nth-of-type(53):hover {
+	background-image: url('cursor/53.jpeg');
+}
+
+.col-12:nth-of-type(54):hover {
+	background-image: url('cursor/54.jpeg');
+}
+
+.col-12:nth-of-type(55):hover {
+	background-image: url('cursor/55.jpeg');
+}
+
+.col-12:nth-of-type(56):hover {
+	background-image: url('cursor/56.jpeg');
+}
+
+.col-12:nth-of-type(57):hover {
+	background-image: url('cursor/57.jpeg');
+}
+
+.col-12:nth-of-type(58):hover {
+	background-image: url('cursor/58.jpeg');
+}
+
+.col-12:nth-of-type(59):hover {
+	background-image: url('cursor/59.jpeg');
+}
+
+.col-12:nth-of-type(60):hover {
+	background-image: url('cursor/60.jpeg');
+}
+
+@media (min-width: 576px) {
+	p {
+		margin-top: 28%;
+	}
+	
+	.col-12 {
+		height: calc(((100vw - 2em) / 5) - 1em + (1em / 3));
+		max-width: calc(((100vw - 2em) / 3));
+		padding: 0;
+		padding-left: 1em;
+		padding-right: 1em;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	
+	.col-12:nth-of-type(n):hover {
+		background-image: none;
+	}
+	
+	.titles {
+		top: calc(((100vw - 2em) / 3) - 0.5em + (1em / 3));
+	}
+	
+	.col-12:nth-of-type(1):hover {
+		cursor:url('cursor/1.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(2):hover {
+		cursor:url('cursor/2.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(3):hover {
+		cursor:url('cursor/3.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(4):hover {
+		cursor:url('cursor/4.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(5):hover {
+		cursor:url('cursor/5.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(6):hover {
+		cursor:url('cursor/6.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(7):hover {
+		cursor:url('cursor/7.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(8):hover {
+		cursor:url('cursor/8.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(9):hover {
+		cursor:url('cursor/9.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(10):hover {
+		cursor:url('cursor/10.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(11):hover {
+		cursor:url('cursor/11.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(12):hover {
+		cursor:url('cursor/12.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(13):hover {
+		cursor:url('cursor/13.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(14):hover {
+		cursor:url('cursor/14.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(15):hover {
+		cursor:url('cursor/15.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(16):hover {
+		cursor:url('cursor/16.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(17):hover {
+		cursor:url('cursor/17.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(18):hover {
+		cursor:url('cursor/18.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(19):hover {
+		cursor:url('cursor/19.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(20):hover {
+		cursor:url('cursor/20.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(21):hover {
+		cursor:url('cursor/21.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(22):hover {
+		cursor:url('cursor/22.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(23):hover {
+		cursor:url('cursor/23.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(24):hover {
+		cursor:url('cursor/24.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(25):hover {
+		cursor:url('cursor/25.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(26):hover {
+		cursor:url('cursor/26.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(27):hover {
+		cursor:url('cursor/27.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(28):hover {
+		cursor:url('cursor/28.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(29):hover {
+		cursor:url('cursor/29.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(30):hover {
+		cursor:url('cursor/30.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(31):hover {
+		cursor:url('cursor/31.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(32):hover {
+		cursor:url('cursor/32.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(33):hover {
+		cursor:url('cursor/33.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(34):hover {
+		cursor:url('cursor/34.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(35):hover {
+		cursor:url('cursor/35.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(36):hover {
+		cursor:url('cursor/36.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(37):hover {
+		cursor:url('cursor/37.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(38):hover {
+		cursor:url('cursor/38.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(39):hover {
+		cursor:url('cursor/39.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(40):hover {
+		cursor:url('cursor/40.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(41):hover {
+		cursor:url('cursor/41.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(42):hover {
+		cursor:url('cursor/42.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(43):hover {
+		cursor:url('cursor/43.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(44):hover {
+		cursor:url('cursor/44.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(45):hover {
+		cursor:url('cursor/45.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(46):hover {
+		cursor:url('cursor/46.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(47):hover {
+		cursor:url('cursor/47.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(48):hover {
+		cursor:url('cursor/48.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(49):hover {
+		cursor:url('cursor/49.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(50):hover {
+		cursor:url('cursor/50.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(51):hover {
+		cursor:url('cursor/51.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(52):hover {
+		cursor:url('cursor/52.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(53):hover {
+		cursor:url('cursor/53.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(54):hover {
+		cursor:url('cursor/54.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(55):hover {
+		cursor:url('cursor/55.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(56):hover {
+		cursor:url('cursor/56.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(57):hover {
+		cursor:url('cursor/57.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(58):hover {
+		cursor:url('cursor/58.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(59):hover {
+		cursor:url('cursor/59.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(60):hover {
+		cursor:url('cursor/60.jpeg'), auto;
+	}
+}
+
+@media (min-width: 768px) {
+	p {
+		margin-top: 32%;
+	}
+	
+	.col-12 {
+		height: calc(((100vw - 2em) / 6) - 1em + (1em / 4));
+		max-width: calc(((100vw - 2em) / 4));
+	}
+	
+	.titles {
+		top: calc(((100vw - 2em) / 4) - 0.5em + (1em / 4));
+	}
+	
+	.col-12:nth-of-type(3n - 2) {
+		margin-left: 0em;
+	}
+
+	.col-12:nth-of-type(3n + 3) {
+		margin-right: 0em;
+	}
+	
+	.col-12:nth-of-type(4n - 3) {
+		margin-left: 0;
+	}
+
+	.col-12:nth-of-type(4n + 4) {
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	
+	.col-12 {
+		height: calc(((100vw - 2em) / 9) + (1em / 6));
+		max-width: calc(((100vw - 2em) / 6));
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+	
+	.col-12.outside-left {
+		margin-left: 0;
+	}
+	
+	.col-12.outside-right {
+		margin-right: 0;
+	}
+	
+	.col-12 div {
+		position: absolute;
+		height: 10%;
+		width: 50%;
+		top: 50%;
+		left: 1em;
+		opacity: 0;
+		display: flex;
+	}
+	
+	.col-12:hover>div {
+		opacity: 1;
+	}
+}

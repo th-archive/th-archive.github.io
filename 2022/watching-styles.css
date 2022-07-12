@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+html {
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+body {
+	background-color: #140737;
+	color: sandybrown;
+	position: relative;
+	max-height: 100vh;
+	transform: translateX(0);
+}
+
+a, a:hover {
+	color: sandybrown;
+	width: max-content;
+	max-width: 100%;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	white-space: nowrap;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.left.menu p:hover::after {
+	content: " ↗";
+}
+
+.right.menu p:hover::before {
+	content: "↖ ";
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+p, .legend {
+	text-align: center;
+	font-size: 0.75em;
+	margin: 0;
+	padding: 0;
+}
+
+.menu {
+	top: 1em;
+	height: 2em;
+	margin-bottom: 1em;
+}
+
+.left.menu p, .left p {
+	text-align: left;
+}
+
+.left.menu a, .left a {
+	float: left;
+	clear: both;
+}
+
+.middle.menu h1 {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	line-height: 0.8em;
+}
+
+div.middle.menu {
+	display: flex;
+	justify-content: center;
+}
+
+.right.menu p, .right p {
+	text-align: right;
+}
+
+.right.menu a, .right a {
+	float: right;
+	clear: both;
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+}
+
+a p {
+	display: inline;
+}
+
+.right a {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.left a {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.main .row {
+	display: flex;
+	justify-content: center;
+	width: calc(100vw - 2em);
+}
+
+.col-12 {
+	display: flex;
+	justify-content: center;
+}
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+	height: calc(100% - 5em);
+/*	bottom: 1em;*/
+	top: 5em;
+}
+
+img {
+	height: calc(100vh - 10.5em);
+	margin: 1em;
+}
+
+.img-container, .p {
+	width: calc(100vw - 2em);
+	display: flex;
+	justify-content: center;
+}
+
+main {
+	margin: 1em;
+	width: calc(100vw - 2em);
+	height: calc(100vh - 5em);
+	overflow: scroll;
+}
+
+main .container-fluid.tabs {
+	position: fixed;
+	z-index: 1;
+	width: calc(100vw - 2em);
+	height: calc(100vh - 5em);
+}
+
+main .row {
+	width: calc(100vw - 2em);
+	height: calc(100vh - 5em);
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.col-1 {
+	max-width: calc((100vw - 2em) / 34);
+	height: calc(100vh - 5em);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: visible;
+}
+
+.info {
+	opacity: 0;
+	position: fixed;
+}
+
+.info.visible {
+	opacity: 1;
+}
+
+.arrow-left .instructions {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	height: calc(100vh - 5em);
+	width: calc((100vw - 2em) / 34);
+	position: absolute;
+	left: 0;
+}
+
+.arrow-left {
+	justify-content: flex-start;
+	overflow: visible;
+}
+
+.arrow-right .instructions {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	height: calc(100vh - 5em);
+	width: calc((100vw - 2em) / 34);
+	position: absolute;
+	right: 0;
+}
+
+.arrow-right {
+	justify-content: flex-end;
+	overflow: visible;
+}
