@@ -424,6 +424,166 @@ col-12 div  {
 	background-image: url('cursor/60.jpeg');
 }
 
+.col-12:nth-of-type(61):hover {
+	background-image: url('cursor/61.jpeg');
+}
+
+.col-12:nth-of-type(62):hover {
+	background-image: url('cursor/62.jpeg');
+}
+
+.col-12:nth-of-type(63):hover {
+	background-image: url('cursor/63.jpeg');
+}
+
+.col-12:nth-of-type(64):hover {
+	background-image: url('cursor/64.jpeg');
+}
+
+.col-12:nth-of-type(65):hover {
+	background-image: url('cursor/65.jpeg');
+}
+
+.col-12:nth-of-type(66):hover {
+	background-image: url('cursor/66.jpeg');
+}
+
+.col-12:nth-of-type(67):hover {
+	background-image: url('cursor/67.jpeg');
+}
+
+.col-12:nth-of-type(68):hover {
+	background-image: url('cursor/68.jpeg');
+}
+
+.col-12:nth-of-type(69):hover {
+	background-image: url('cursor/69.jpeg');
+}
+
+.col-12:nth-of-type(70):hover {
+	background-image: url('cursor/70.jpeg');
+}
+
+.col-12:nth-of-type(71):hover {
+	background-image: url('cursor/71.jpeg');
+}
+
+.col-12:nth-of-type(72):hover {
+	background-image: url('cursor/72.jpeg');
+}
+
+.col-12:nth-of-type(73):hover {
+	background-image: url('cursor/73.jpeg');
+}
+
+.col-12:nth-of-type(74):hover {
+	background-image: url('cursor/74.jpeg');
+}
+
+.col-12:nth-of-type(75):hover {
+	background-image: url('cursor/75.jpeg');
+}
+
+.col-12:nth-of-type(76):hover {
+	background-image: url('cursor/76.jpeg');
+}
+
+.col-12:nth-of-type(77):hover {
+	background-image: url('cursor/77.jpeg');
+}
+
+.col-12:nth-of-type(78):hover {
+	background-image: url('cursor/78.jpeg');
+}
+
+.col-12:nth-of-type(79):hover {
+	background-image: url('cursor/79.jpeg');
+}
+
+.col-12:nth-of-type(80):hover {
+	background-image: url('cursor/80.jpeg');
+}
+
+.col-12:nth-of-type(81):hover {
+	background-image: url('cursor/81.jpeg');
+}
+
+.col-12:nth-of-type(82):hover {
+	background-image: url('cursor/82.jpeg');
+}
+
+.col-12:nth-of-type(83):hover {
+	background-image: url('cursor/83.jpeg');
+}
+
+.col-12:nth-of-type(84):hover {
+	background-image: url('cursor/84.jpeg');
+}
+
+.col-12:nth-of-type(85):hover {
+	background-image: url('cursor/85.jpeg');
+}
+
+.col-12:nth-of-type(86):hover {
+	background-image: url('cursor/86.jpeg');
+}
+
+.col-12:nth-of-type(87):hover {
+	background-image: url('cursor/87.jpeg');
+}
+
+.col-12:nth-of-type(88):hover {
+	background-image: url('cursor/88.jpeg');
+}
+
+.col-12:nth-of-type(89):hover {
+	background-image: url('cursor/89.jpeg');
+}
+
+.col-12:nth-of-type(90):hover {
+	background-image: url('cursor/90.jpeg');
+}
+
+.col-12:nth-of-type(91):hover {
+	background-image: url('cursor/91.jpeg');
+}
+
+.col-12:nth-of-type(92):hover {
+	background-image: url('cursor/92.jpeg');
+}
+
+.col-12:nth-of-type(93):hover {
+	background-image: url('cursor/93.jpeg');
+}
+
+.col-12:nth-of-type(94):hover {
+	background-image: url('cursor/94.jpeg');
+}
+
+.col-12:nth-of-type(95):hover {
+	background-image: url('cursor/95.jpeg');
+}
+
+.col-12:nth-of-type(96):hover {
+	background-image: url('cursor/96.jpeg');
+}
+
+.col-12:nth-of-type(97):hover {
+	background-image: url('cursor/97.jpeg');
+}
+
+.col-12:nth-of-type(98):hover {
+	background-image: url('cursor/98.jpeg');
+}
+
+.col-12:nth-of-type(99):hover {
+	background-image: url('cursor/99.jpeg');
+}
+
+.col-12:nth-of-type(100):hover {
+	background-image: url('cursor/100.jpeg');
+}
+
 @media (min-width: 576px) {
 	p {
 		margin-top: 28%;
@@ -686,6 +846,166 @@ col-12 div  {
 
 	.col-12:nth-of-type(60):hover {
 		cursor:url('cursor/60.jpeg'), auto;
+	}
+	
+	.col-12:nth-of-type(61):hover {
+		cursor:url('cursor/61.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(62):hover {
+		cursor:url('cursor/62.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(63):hover {
+		cursor:url('cursor/63.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(64):hover {
+		cursor:url('cursor/64.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(65):hover {
+		cursor:url('cursor/65.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(66):hover {
+		cursor:url('cursor/66.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(67):hover {
+		cursor:url('cursor/67.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(68):hover {
+		cursor:url('cursor/68.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(69):hover {
+		cursor:url('cursor/69.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(70):hover {
+		cursor:url('cursor/70.jpeg'), auto;
+	}
+	
+	.col-12:nth-of-type(71):hover {
+		cursor:url('cursor/71.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(72):hover {
+		cursor:url('cursor/72.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(73):hover {
+		cursor:url('cursor/73.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(74):hover {
+		cursor:url('cursor/74.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(75):hover {
+		cursor:url('cursor/75.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(76):hover {
+		cursor:url('cursor/76.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(77):hover {
+		cursor:url('cursor/77.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(78):hover {
+		cursor:url('cursor/78.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(79):hover {
+		cursor:url('cursor/79.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(80):hover {
+		cursor:url('cursor/80.jpeg'), auto;
+	}
+	
+	.col-12:nth-of-type(81):hover {
+		cursor:url('cursor/81.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(82):hover {
+		cursor:url('cursor/82.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(83):hover {
+		cursor:url('cursor/83.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(84):hover {
+		cursor:url('cursor/84.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(85):hover {
+		cursor:url('cursor/85.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(86):hover {
+		cursor:url('cursor/86.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(87):hover {
+		cursor:url('cursor/87.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(88):hover {
+		cursor:url('cursor/88.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(89):hover {
+		cursor:url('cursor/89.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(90):hover {
+		cursor:url('cursor/90.jpeg'), auto;
+	}
+	
+	.col-12:nth-of-type(91):hover {
+		cursor:url('cursor/91.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(92):hover {
+		cursor:url('cursor/92.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(93):hover {
+		cursor:url('cursor/93.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(94):hover {
+		cursor:url('cursor/94.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(95):hover {
+		cursor:url('cursor/95.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(96):hover {
+		cursor:url('cursor/96.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(97):hover {
+		cursor:url('cursor/97.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(98):hover {
+		cursor:url('cursor/98.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(99):hover {
+		cursor:url('cursor/99.jpeg'), auto;
+	}
+
+	.col-12:nth-of-type(100):hover {
+		cursor:url('cursor/100.jpeg'), auto;
 	}
 }
 
