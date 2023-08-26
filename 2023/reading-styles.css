@@ -77,7 +77,7 @@ main h2:not(.title) {
 	text-align: center;
 }
 
-.book .number:not(.col-12:nth-of-type(2) .number) {
+.book .number:not(.col-12:nth-of-type(1) .number) {
 	margin-top: 1em;
 }
 
@@ -93,23 +93,42 @@ main .row div {
 
 .title {
 	text-transform: uppercase;
-	height: 1em;
+	height: max-content;
 	font-size: 1.5em;
 	margin-left: 0.25em;
 	margin-right: 0.25em;
-	white-space: nowrap;
+	word-break: keep-all;
+	white-space: normal;
+	display: inline-block;
+	text-align: center;
+	justify-content: center;
 }
 
-.title img {
-	height: 72.5%;
+.title span {
+	display: inline-block;
+	background-color: #C9D5F8;
+	max-width: max-content;
+	min-width: max-content;
+	min-height: 0.7em;
+	height: 0.7em;
+	max-height: 0.7em;
+}
+
+.title span img {
+	min-height: 0.7em;
+	height: 0.7em;
+	max-height: 0.7em;
+	display: flex;
 	width: auto;
-	top: -10%;
+	filter: grayscale();
+	mix-blend-mode: screen;
 }
 
 .content {
 	width: calc(100vw - 2em);
-	height: calc(100dvh - 5em);
+	height: calc(100dvh - 6em);
 	margin: 1em;
+	top: 1em;
 	padding: 0em;
 	overflow: visible;
 	display: flex;
@@ -117,25 +136,31 @@ main .row div {
 
 main {
 	min-width: calc(100vw - 2em);
-	max-width: calc(100vw - 2em);
-	height: calc(100dvh - 5em);
+	width: calc(100vw - 2em);
+	height: calc(100dvh - 6em);
 	margin: 0;
 	padding: 0;
 	display: flex;
 	align-items: flex-start;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
-.row .spacer {
-	height: 5em;
-}
-
-.col-12:hover {
-	transform: scale(105%);
+.col-12:hover>.title span img {
+	filter: none;
+	mix-blend-mode: normal;
 }
 
 .col-12 {
 	flex-wrap: nowrap;
+}
+
+.row:hover>.col-12 {
+	opacity: 0.25;
+}
+
+.row:hover>.col-12:hover {
+	opacity: 1;
 }
 
 .menu p {
@@ -183,7 +208,7 @@ div.middle.menu {
 
 @media (min-width: 768px) {
 	
-	.book .number:not(.col-12:nth-of-type(2) .number) {
+	.book .number:not(.col-12:nth-of-type(1) .number) {
 		margin-top: 0;
 	}
 	
@@ -199,15 +224,15 @@ div.middle.menu {
 		margin-left: 0.25em;
 		margin-right: 0.25em;
 	}
+	
+	.title span {
+		max-height: 0.7em;
+		min-height: 0.7em;
+	}
 
 	.title img {
-		height: 72.5%;
-		width: auto;
-		top: -10%;
-	}
-	
-	.col-12:hover {
-		transform: scale(115%);
+		max-height: 0.7em;
+		min-height: 0.7em;
 	}
 }
 
@@ -223,16 +248,6 @@ div.middle.menu {
 		height: 1em;
 		margin-left: 0.25em;
 		margin-right: 0.25em;
-	}
-
-	.title img {
-		height: 72.5%;
-		width: auto;
-		top: -10%;
-	}
-	
-	.col-12:hover {
-		transform: scale(125%);
 	}
 	
 	.row .spacer {

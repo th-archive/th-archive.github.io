@@ -137,7 +137,7 @@ main .row {
 }
 
 h1.title {
-	white-space: wrap;
+	white-space: normal;
 }
 
 .col-sm-6 {

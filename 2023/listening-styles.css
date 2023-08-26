@@ -156,7 +156,7 @@ div.middle.menu {
 
 .pseudo h1 {
 	font-size: 4em;
-	white-space: wrap;
+	white-space: normal;
 /*
 	font-family: "serif";
 	font-style: italic;
