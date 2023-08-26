@@ -136,7 +136,7 @@ main .row {
 	justify-content: space-between;
 }
 
-.title {
+h1.title {
 	white-space: wrap;
 }
 
