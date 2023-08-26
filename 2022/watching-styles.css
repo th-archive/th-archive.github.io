@@ -149,7 +149,6 @@ img {
 .img-container {
 	height: calc(100dvh - 10.5em);
 	width: calc(100vw - 6em);
-	background-color: pink;
 }
 
 main {
