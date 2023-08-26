@@ -19,7 +19,7 @@ body {
 	background-color: #5A6366;
 /*	background-color: #84732B;*/
 	color: #C9D5F8;
-	max-height: 100vh;
+	max-height: 100dvh;
 	max-height: -webkit-fill-available;
 	transform: translateX(0);
 }
@@ -108,7 +108,7 @@ main .row div {
 
 .content {
 	width: calc(100vw - 2em);
-	height: calc(100vh - 5em);
+	height: calc(100dvh - 5em);
 	margin: 1em;
 	padding: 0em;
 	overflow: visible;
@@ -118,7 +118,7 @@ main .row div {
 main {
 	min-width: calc(100vw - 2em);
 	max-width: calc(100vw - 2em);
-	height: calc(100vh - 5em);
+	height: calc(100dvh - 5em);
 	margin: 0;
 	padding: 0;
 	display: flex;

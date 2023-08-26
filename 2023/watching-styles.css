@@ -180,6 +180,7 @@ h1.title {
 	top: 5em;
 	left: 1em;
 	pointer-events: none;
+	white-space: wrap;
 	text-transform: uppercase;
 }
 

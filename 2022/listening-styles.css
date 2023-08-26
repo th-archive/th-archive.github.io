@@ -18,7 +18,7 @@ html {
 body {
 	color: #FFC4C5;
 	background-color: cornflowerblue;
-	max-height: 100vh;
+	max-height: 100dvh;
 	max-height: -webkit-fill-available;
 	transform: translateX(0);
 }
@@ -136,7 +136,7 @@ div.middle.menu {
 .container-fluid.main {
 	margin: 1em;
 	width: calc(100vw - 2em);
-	height: calc(100vh - 5em);
+	height: calc(100dvh - 5em);
 	overflow-x: hidden;
 	overflow-y: scroll;
 }

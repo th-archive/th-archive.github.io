@@ -19,7 +19,7 @@ body {
 /*	background-color: #BFD3C1;*/
 	background-color: #D85F43;
 	color: antiquewhite;
-	max-height: 100vh;
+	max-height: 100dvh;
 	max-height: -webkit-fill-available;
 	transform: translateX(0);
 }
@@ -67,7 +67,7 @@ a:hover {
 }
 
 .ticker {
-	height: 36vh;
+	height: 36dvh;
 	display: flex;
 	width: calc(100% - 2em);
 	margin: 1em;
@@ -75,8 +75,8 @@ a:hover {
 }
 
 .ticker img {
-	width: 20vh;
-	height: 30vh;
+	width: 20dvh;
+	height: 30dvh;
 	object-fit: cover;
 	object-position: 50%;
 	margin: 0 1vw 0 0;
@@ -85,8 +85,8 @@ a:hover {
 }
 
 .ticker img:hover {
-	width: 24vh;
-	height: 36vh;
+	width: 24dvh;
+	height: 36dvh;
 	transition-property: all;
 	transition-duration: 0.45s;
 }
@@ -117,7 +117,7 @@ a:hover {
 	display: flex;
 	margin: 1em;
 	margin-top: 0;
-	height: calc(64vh - 6em);
+	height: calc(64dvh - 6em);
 	overflow: scroll;
 }
 
