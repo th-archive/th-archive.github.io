@@ -67,8 +67,7 @@ a:hover {
 
 .content {
 	width: calc(100vw - 2em);
-	height: calc(100vh - 6em);
-	font-size: 0.75em;
+	height: calc(100vh - 5em);
 	margin: 1em;
 	overflow: hidden;
 }
@@ -105,6 +104,10 @@ footer {
 	align-items: center;
 	position: absolute;
 	bottom: 0;
+}
+
+.content p {
+	font-size: 0.75em;
 }
 
 .toggle, .toggle:hover {
@@ -258,7 +261,7 @@ img {
 	display: flex;
 	margin: 1em;
 	margin-top: 0;
-	height: calc(64vh - 6em);
+	height: calc(64vh - 5em);
 	overflow: scroll;
 }
 

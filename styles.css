@@ -67,10 +67,12 @@ hr {
 .container-fluid.main {
 	display: flex;
 	margin: 1em;
+	padding: 0 calc(50% - 5vw);
 	width: calc(100vw - 2em);
 	height: calc(100vh - 2em);
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
+	overflow-x: scroll;
 }
 
 .vl-container {
