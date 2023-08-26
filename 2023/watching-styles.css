@@ -173,6 +173,7 @@ h1.title {
 	display: none;
 	flex-direction: column;
 	justify-content: center;
+	max-width: calc(100vw - 2em);
 	width: calc(100vw - 2em);
 	align-items: center;
 	text-align: center;
@@ -180,7 +181,6 @@ h1.title {
 	top: 5em;
 	left: 1em;
 	pointer-events: none;
-	white-space: wrap;
 	text-transform: uppercase;
 }
 
