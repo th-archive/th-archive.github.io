@@ -183,6 +183,28 @@ main .row {
 	overflow: visible;
 }
 
+.col-1:not(:first-of-type, :last-of-type) p {
+	min-width: 2em;
+	min-height: 2em;
+	border-radius: 1em;
+	border: 0.25px solid sandybrown;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tabs:hover .col-1:not(:first-of-type, :last-of-type) {
+	opacity: 0.5;
+}
+
+.tabs:hover .col-1:not(:first-of-type, :last-of-type):hover {
+	opacity: 1;
+}
+
+.tabs:hover .col-1:not(:first-of-type, :last-of-type):hover p {
+	background-color: rgba(20, 7, 55, 0.5);
+}
+
 .info {
 	opacity: 0;
 	position: fixed;

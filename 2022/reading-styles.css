@@ -226,6 +226,7 @@ main:hover>div .row .col-1:nth-of-type(4n) div, .col-1:nth-of-type(4n) div, .col
 .cover {
 	width: calc((100vw - 2em) / 10);
 	min-height: calc(2 * (100dvh - 7em) / 5);
+	overflow: hidden;
 }
 
 .cover div {
