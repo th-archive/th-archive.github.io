@@ -143,14 +143,14 @@ h2 {
 .column-reverse {
 	display: flex;
 	flex-direction: column-reverse;
-	top: calc(-26.25 * 36px);
+	top: calc(-40.25 * 36px);
 	overflow: hidden;
 }
 
 .column {
 	display: flex;
 	flex-direction: column;
-	top: calc(-9.25 * 36px);
+	top: calc(-16.25 * 36px);
 }
 
 .column h2, .column-reverse h2, .column-reverse img {

@@ -9,7 +9,7 @@ main.addEventListener("scroll", (event) => {
 		columnRevs[0].style.transform = `translateY(${offset}px)`;
 		columnRevs[1].style.transform = `translateY(${offset}px)`;
 
-		if (main.scrollTop >= 648) {
+		if (main.scrollTop >= 893) {
 			main.scrollTo({top: 0})
 		}
 });
