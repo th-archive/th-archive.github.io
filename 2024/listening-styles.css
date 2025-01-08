@@ -114,8 +114,8 @@ div.middle.menu {
 }
 
 .container-fluid.main, main {
-	margin: 1em;
-	width: calc(100vw - 2em);
+	margin: 1em 0;
+	width: 100vw;
 	height: calc(100dvh - 5em);
 	overflow-x: hidden;
 	overflow-y: scroll;
