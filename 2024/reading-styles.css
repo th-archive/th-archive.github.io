@@ -138,6 +138,10 @@ h2 {
 	height: 36px;
 	font-size: 0.8em;
 	font-weight: 300;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .column-reverse {
@@ -151,6 +155,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	top: calc(-16.25 * 36px);
+	overflow: hidden;
 }
 
 .column h2, .column-reverse h2, .column-reverse img {
@@ -162,6 +167,7 @@ img {
 	height: 32px;
 	margin: 2px 0;
 	width: auto;
+	flex-shrink: 0;
 }
 
 .top-overlay, .bottom-overlay {
@@ -179,6 +185,10 @@ img {
 	background-image: linear-gradient(transparent 0%, rgba(43, 38, 28, 0.25) 5%, rgba(43, 38, 28, 1) 100%);
 }
 
+.img-column, .number-column {
+	flex-shrink: 0;
+}
+
 @media (min-width: 768px) {
 	h2 {
 		font-size: 1em;
@@ -190,6 +200,5 @@ img {
 	h2 {
 		font-size: 2em;
 		font-weight: 500;
-		white-space: nowrap;
 	}
 }
