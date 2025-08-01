@@ -158,9 +158,13 @@ h2 {
 	overflow: hidden;
 }
 
+.number-column.column {
+	overflow: unset;
+}
+
 .column h2, .column-reverse h2, .column-reverse img {
 	scroll-snap-align: center;
-	scroll-snap-stop: always;
+	scroll-snap-stop:normal;
 }
 
 img {
