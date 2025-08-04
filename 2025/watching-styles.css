@@ -11,6 +11,7 @@
 
   --bg-color: #717100;
   --fg-color: lavender;
+  --num-items: 6;
 }
 
 html {
@@ -137,27 +138,12 @@ main {
   scroll-timeline: --squareTimeline y;
 }
 
-.scrollable {
-  width: 100%;
-  height: calc((100dvh - 5em));
-  align-self: start;
-}
-
 @keyframes instructions2Animation {
   0% {
     left: 0;
   }
-  25% {
-    left: calc((100vw - 2em) / -4 * 1);
-  }
-  50% {
-    left: calc((100vw - 2em) / -4 * 2);
-  }
-  75% {
-    left: calc((100vw - 2em) / -4 * 3);
-  }
   100% {
-    left: calc((100vw - 2em) / -4 * 4);
+    left: calc((100vw - 2em) / -4 * var(--num-items));
   }
 }
 
@@ -165,10 +151,7 @@ main {
   position: absolute;
   width: 0;
   height: 0;
-  animation: instructions2Animation both 1ms;
-  /* animation-fill-mode: both;
-  animation-name: instructions2Animation;
-  animation-duration: 1ms; */
+  animation: instructions2Animation both linear 1ms;
   animation-timeline: --squareTimeline;
 }
 
