@@ -1,15 +1,8 @@
-const main = document.querySelector("main");
-const columnRevs = document.querySelectorAll(".column-reverse");
-const columnH2 = document.querySelectorAll(".column-reverse h2");
-const columnImg = document.querySelectorAll(".column-reverse img");
-const columnRevHeight = columnRevs[0].clientHeight
-
-main.addEventListener("scroll", (event) => {
-		var offset = 2 * main.scrollTop;
-		columnRevs[0].style.transform = `translateY(${offset}px)`;
-		columnRevs[1].style.transform = `translateY(${offset}px)`;
-
-		if (main.scrollTop >= 893) {
-			main.scrollTo({top: 0})
-		}
+const numberColumnH2 = document.querySelectorAll(".number-column h2");
+const anglesBtwn = 360 / numberColumnH2.length;
+numberColumnH2.forEach((h2) => {
+  const index = Number(h2.innerHTML);
+  h2.style.transform = `rotateY(${
+    index * anglesBtwn
+  }deg) translateZ(35vw) rotateY(90deg) `;
 });

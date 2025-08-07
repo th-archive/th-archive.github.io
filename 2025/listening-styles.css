@@ -207,7 +207,7 @@ main {
 
 .song-container {
   transform-origin: center;
-  transform: rotate(calc(360deg * var(--n) * 4 / var(--num)))
+  transform: (calc(360deg * var(--n) * 4 / var(--num)))
     translate(calc(1em * var(--dist) * var(--dist)));
   height: 10em;
   width: 10em;
