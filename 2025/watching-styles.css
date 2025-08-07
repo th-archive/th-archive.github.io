@@ -130,7 +130,7 @@ main {
   overflow: hidden;
 }
 
-main > main {
+main main {
   margin: 0;
   margin-left: -0.5em;
   width: calc(100vw - 1em);
