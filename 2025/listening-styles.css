@@ -132,7 +132,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  scroll-timeline: --squareTimeline y;
+  scroll-timeline: --listenTimeline y;
 }
 
 .scrollable {
@@ -201,7 +201,7 @@ main {
   animation-fill-mode: both;
   animation-name: rotateAnimation;
   animation-duration: 1ms;
-  animation-timeline: --squareTimeline;
+  animation-timeline: --listenTimeline;
   /* z-index: -2; */
 }
 
@@ -344,7 +344,7 @@ img {
   animation-fill-mode: both;
   animation-name: infoAnimation;
   animation-duration: 1ms;
-  animation-timeline: --squareTimeline;
+  animation-timeline: --listenTimeline;
   opacity: 1;
   z-index: -10;
 }
@@ -369,7 +369,7 @@ img {
   animation-fill-mode: both;
   animation-name: infoAnimation;
   animation-duration: 1ms;
-  animation-timeline: --squareTimeline;
+  animation-timeline: --listenTimeline;
   opacity: 1 !important;
   z-index: 0;
 }
@@ -425,7 +425,7 @@ p {
   animation-fill-mode: both;
   animation-name: instructions1Animation;
   animation-duration: 1ms;
-  animation-timeline: --squareTimeline, none;
+  animation-timeline: --listenTimeline, none;
 }
 
 .instructions:nth-of-type(2) {
@@ -434,7 +434,7 @@ p {
   animation-fill-mode: both;
   animation-name: instructions2Animation;
   animation-duration: 1ms;
-  animation-timeline: --squareTimeline, none;
+  animation-timeline: --listenTimeline, none;
 }
 
 .instructions p {
@@ -476,7 +476,7 @@ p {
     animation-fill-mode: both;
     animation-name: instructions1Animation;
     animation-duration: 1ms;
-    animation-timeline: --squareTimeline;
+    animation-timeline: --listenTimeline;
   }
 
   .instructions:nth-of-type(2) {
@@ -486,7 +486,7 @@ p {
     animation-fill-mode: both;
     animation-name: instructions2Animation;
     animation-duration: 1ms;
-    animation-timeline: --squareTimeline;
+    animation-timeline: --listenTimeline;
   }
 }
 

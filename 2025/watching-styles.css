@@ -11,7 +11,9 @@
 
   --bg-color: #717100;
   --fg-color: lavender;
-  --num-items: 8;
+  --num-items: 2;
+  --total-num-items: 10;
+  --leftover-items: calc(var(--total-num-items) - var(--num-items));
 }
 
 html {
@@ -137,15 +139,15 @@ main main {
   overflow-y: scroll;
   scroll-snap-type: y proximity;
   display: flex;
-  scroll-timeline: --squareTimeline y;
+  scroll-timeline: --watchTimeline y;
 }
 
-@keyframes instructions2Animation {
+@keyframes watchDivs {
   0% {
     left: 0;
   }
   100% {
-    left: calc((100vw - 1em) / 2 * -8);
+    left: calc(-1 * (100vw - 1em) / var(--num-items) * var(--leftover-items));
   }
 }
 
@@ -153,12 +155,12 @@ main main {
   position: absolute;
   width: 0;
   height: 0;
-  animation: instructions2Animation both linear 1ms;
-  animation-timeline: --squareTimeline;
+  animation: watchDivs both linear 1ms;
+  animation-timeline: --watchTimeline;
 }
 
 .info {
-  width: calc((100vw - 1em) / 2);
+  width: calc((100vw - 1em) / var(--num-items));
   height: calc((100dvh - 5em) / 1.5);
   display: flex;
   flex-direction: column;
@@ -201,61 +203,93 @@ img {
   min-height: calc(100% - 0.5em);
 }
 
-@media (min-width: 768px) {
-  /* 6 */
-  @keyframes instructions2Animation {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: calc((100vw - 1em) / -4 * 6);
-    }
+.instructions {
+  font-size: 0.8em;
+  position: fixed;
+}
+
+@keyframes instructions1Animation {
+  0% {
+    right: calc(5em + 1em);
+    opacity: 1;
   }
+  15% {
+    right: 1em;
+    opacity: 0;
+  }
+}
+
+@keyframes instructions2Animation {
+  0% {
+    left: calc(5em + 1em);
+    opacity: 1;
+  }
+  15% {
+    left: 1em;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  35%,
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.instructions:nth-of-type(1) {
+  top: calc(5em + 5em);
+  right: 1em;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-name: instructions1Animation;
+  animation-duration: 1ms;
+  animation-timeline: --watchTimeline, none;
+}
+
+.instructions:nth-of-type(2) {
+  bottom: calc(1em + 5em);
+  left: 1em;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-name: instructions2Animation;
+  animation-duration: 1ms;
+  animation-timeline: --watchTimeline, none;
+}
+
+.instructions p {
+  font-size: 1em;
+  animation: pulse infinite 2000ms ease-in;
+}
+
+@media (min-width: 768px) {
+  * {
+    --num-items: 4;
+  }
+
   .info {
-    width: calc((100vw - 1em) / 4);
     height: calc((100dvh - 5em) / 2);
   }
 
   .info-nested-container {
-    top: calc(100% / 3);
+    top: calc(100% / (var(--num-items) - 1));
   }
 }
 
 @media (min-width: 992px) {
-  /* 6 */
-  @keyframes instructions2Animation {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: calc((100vw - 1em) / -6 * 4);
-    }
-  }
-  .info {
-    width: calc((100vw - 1em) / 6);
-  }
-
-  .info-nested-container {
-    top: calc(100% / 5);
+  * {
+    --num-items: 6;
   }
 }
 
 @media (min-width: 1280px) {
-  /* 8 */
-  @keyframes instructions2Animation {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: calc((100vw - 1em) / 8 * -2);
-      /* divide by number of items per page, multiply by items left over */
-    }
-  }
-  .info {
-    width: calc((100vw - 1em) / 8);
-  }
-
-  .info-nested-container {
-    top: calc(100% / 7);
+  * {
+    --num-items: 8;
   }
 }
