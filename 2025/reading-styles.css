@@ -11,6 +11,8 @@
 
   --fg-color: rosybrown;
   --bg-color: papayawhip;
+  --rotation: 0deg;
+  --index: 0;
 }
 
 html {
@@ -133,32 +135,113 @@ div.middle.menu {
 
 @keyframes rotateAnimation {
   0% {
-    transform: rotateY(calc(360deg / -25));
+    transform: rotateY(0);
   }
 }
 
-.number-column {
-  width: 100%;
+.img-column {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   position: relative;
   transform-style: preserve-3d;
   pointer-events: none;
   position: fixed;
-  transform: rotateY(calc(360deg / -25 - 360deg));
+  width: calc(100vw - 2em);
+  height: calc(100dvh - 6em);
+  transform: rotateY(-360deg);
   animation: rotateAnimation both linear 1ms;
   animation-timeline: --readTimeline;
 }
 
-.number-column h2 {
+@keyframes translateAnimation {
+  0% {
+    translate: 0;
+  }
+}
+
+.number-column {
+  display: flex;
+  align-items: center;
+  position: relative;
+  pointer-events: none;
+  position: fixed;
+  width: calc(100vw - 2em);
+  height: 2em;
+  z-index: 5;
+  animation: translateAnimation both linear 1ms;
+  animation-timeline: --readTimeline;
+  translate: calc((100vw - 2em) * -25);
+}
+
+.number-column p {
+  width: 100%;
+  font-size: 0.75em;
+  text-align: center;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.number-column::after {
+  width: 100vw;
+  height: 100%;
+  left: -1em;
+  content: "";
+  position: fixed;
+  background: linear-gradient(
+    to right,
+    var(--bg-color) 40%,
+    transparent 50%,
+    var(--bg-color) 60%
+  );
+  animation: translateAnimation both linear 1ms;
+  animation-timeline: --readTimeline;
+  translate: calc((100vw - 2em) * 25);
+}
+
+.img-column::after {
+  content: "";
+  inset: 0;
+  background-color: var(--bg-color);
+  position: fixed;
+  transform: rotateY(360deg);
+  animation: rotateAnimation both linear 1ms;
+  animation-timeline: --readTimeline;
+}
+
+@keyframes imgRotate {
+  0% {
+    transform: rotateY(var(--rotation)) translateZ(35vw) rotateY(90deg)
+      scale(70%);
+  }
+  25% {
+    transform: rotateY(var(--rotation)) translateZ(35vw) rotateY(90deg)
+      scale(85%);
+  }
+  50% {
+    transform: rotateY(var(--rotation)) translateZ(100vw) rotateY(0deg)
+      scale(110%);
+  }
+  75% {
+    transform: rotateY(var(--rotation)) translateZ(35vw) rotateY(-90deg)
+      scale(85%);
+  }
+  100% {
+    transform: rotateY(var(--rotation)) translateZ(35vw) rotateY(-90deg)
+      scale(70%);
+  }
+}
+
+.img-column img {
   position: absolute;
-  width: 10em;
-  height: 10em;
+  width: 15em;
+  height: 20em;
   border: 1px solid var(--fg-color);
   background-color: var(--bg-color);
-  transform: rotateY(0deg);
+  animation: imgRotate both linear 1ms;
+  animation-timeline: --readTimeline;
+  animation-range: calc(((5000px - (100vw - 2em)) / 25) * (var(--index) - 2))
+    calc(((5000px - (100vw - 2em)) / 25) * (var(--index) + 2));
 }
 
 .scrollable {
@@ -170,10 +253,10 @@ div.middle.menu {
 }
 
 .scrollable div {
-  background-color: pink;
   opacity: 0;
   pointer-events: none;
-  min-width: calc((5000px - (100vw - 2em)) / 25);
+  background-color: pink;
+  min-width: calc(((5000px - (100vw - 2em)) / 25));
   flex-shrink: 0;
   scroll-snap-align: start;
   scroll-snap-type: normal;
