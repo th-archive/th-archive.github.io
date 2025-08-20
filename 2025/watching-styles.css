@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  --bg-color: #717100;
+  --fg-color: lavender;
+  --num-items: 2;
+  --total-num-items: 15;
+  --leftover-items: calc(var(--total-num-items) - var(--num-items));
+}
+
+html {
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  position: relative;
+  max-height: 100dvh;
+  transform: translateX(0);
+}
+
+a,
+a:hover {
+  color: var(--fg-color);
+  width: max-content;
+  max-width: 100%;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.left.menu p:hover::after {
+  content: " ↗";
+}
+
+.right.menu p:hover::before {
+  content: "↖ ";
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+p,
+.legend {
+  text-align: center;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  top: 1em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+.left.menu p,
+.left p {
+  text-align: left;
+}
+
+.left.menu a,
+.left a {
+  float: left;
+  clear: both;
+}
+
+.middle.menu h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+}
+
+div.middle.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.right.menu p,
+.right p {
+  text-align: right;
+}
+
+.right.menu a,
+.right a {
+  float: right;
+  clear: both;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+a p {
+  display: inline;
+}
+
+.right a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left a {
+  display: flex;
+  justify-content: flex-start;
+}
+
+main {
+  margin: 1em;
+  width: calc(100vw - 2em);
+  height: calc(100dvh - 5em);
+  overflow: hidden;
+}
+
+main main {
+  margin: 0;
+  margin-left: -0.5em;
+  width: calc(100vw - 1em);
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  display: flex;
+  scroll-timeline: --watchTimeline y;
+}
+
+@keyframes watchDivs {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(-1 * (100vw - 1em) / var(--num-items) * var(--leftover-items));
+  }
+}
+
+.info-container {
+  position: absolute;
+  width: 0;
+  height: 0;
+  animation: watchDivs both linear 1ms;
+  animation-timeline: --watchTimeline;
+}
+
+.info {
+  width: calc((100vw - 1em) / var(--num-items));
+  height: calc((100dvh - 5em) / 1.5);
+  display: flex;
+  flex-direction: column;
+  padding: 0em 0.5em;
+}
+
+.info-nested-container {
+  /* display: flex;
+  justify-content: start;
+  z-index: 5;
+  width: 100%;
+  flex-direction: column; */
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  position: absolute;
+  left: 100%;
+  top: calc(100% / 2);
+}
+
+sup {
+  text-transform: uppercase;
+}
+
+.img-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.img-container.visible {
+  opacity: 1;
+}
+
+img {
+  object-fit: cover;
+  width: 0;
+  height: 0;
+  min-width: 100%;
+  min-height: calc(100% - 0.5em);
+}
+
+.instructions {
+  font-size: 0.8em;
+  position: fixed;
+}
+
+@keyframes instructions1Animation {
+  0% {
+    right: calc(5em + 1em);
+    opacity: 1;
+  }
+  15% {
+    right: 1em;
+    opacity: 0;
+  }
+}
+
+@keyframes instructions2Animation {
+  0% {
+    left: calc(5em + 1em);
+    opacity: 1;
+  }
+  15% {
+    left: 1em;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  35%,
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.instructions:nth-of-type(1) {
+  top: calc(5em + 5em);
+  right: 1em;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-name: instructions1Animation;
+  animation-duration: 1ms;
+  animation-timeline: --watchTimeline, none;
+}
+
+.instructions:nth-of-type(2) {
+  bottom: calc(1em + 5em);
+  left: 1em;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-name: instructions2Animation;
+  animation-duration: 1ms;
+  animation-timeline: --watchTimeline, none;
+}
+
+.instructions p {
+  font-size: 1em;
+  animation: pulse infinite 2000ms ease-in;
+}
+
+@media (min-width: 768px) {
+  * {
+    --num-items: 4;
+  }
+
+  .info {
+    height: calc((100dvh - 5em) / 2);
+  }
+
+  .info-nested-container {
+    top: calc(100% / (var(--num-items) - 1));
+  }
+}
+
+@media (min-width: 992px) {
+  * {
+    --num-items: 6;
+  }
+}
+
+@media (min-width: 1280px) {
+  * {
+    --num-items: 8;
+  }
+}
