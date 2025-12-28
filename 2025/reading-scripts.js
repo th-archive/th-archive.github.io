@@ -1,7 +1,7 @@
 const imgs = document.querySelectorAll(".img-column img");
 const numbers = document.querySelectorAll(".number-column p");
 const infos = document.querySelectorAll(".info-column .info");
-const anglesBtwn = 360 / (imgs.length + 1);
+const anglesBtwn = 360 / imgs.length;
 imgs.forEach((img, key) => {
   img.style.setProperty("--rotation", `${(key + 1) * anglesBtwn}deg`);
   img.style.setProperty("--index", `${key + 1}`);
@@ -30,25 +30,28 @@ imgCol.firstElementChild.style.setProperty(
   `${0 * anglesBtwn}deg`
 );
 imgCol.firstElementChild.style.setProperty("--index", `${0}`);
+numCol.firstElementChild.style.setProperty("--index", `${0}`);
+infoCol.firstElementChild.style.setProperty("--index", `${0}`);
 
 scrollableDiv.prepend(
-  scrollableDiv.children[numCol.childElementCount - 3].cloneNode(true)
+  scrollableDiv.children[scrollableDiv.childElementCount - 2].cloneNode(true)
 );
-
-scrollableDiv.append(
-  scrollableDiv.children[numCol.childElementCount - 3].cloneNode(true)
+numCol.prepend(numCol.children[numCol.childElementCount - 2].cloneNode(true));
+imgCol.prepend(imgCol.children[imgCol.childElementCount - 2].cloneNode(true));
+infoCol.prepend(
+  infoCol.children[infoCol.childElementCount - 2].cloneNode(true)
 );
-numCol.prepend(numCol.children[numCol.childElementCount - 3].cloneNode(true));
-imgCol.prepend(imgCol.children[numCol.childElementCount - 3].cloneNode(true));
-infoCol.prepend(infoCol.children[numCol.childElementCount - 3].cloneNode(true));
 
 imgCol.firstElementChild.style.setProperty(
   "--rotation",
   `${-1 * anglesBtwn}deg`
 );
 imgCol.firstElementChild.style.setProperty("--index", `${-1}`);
+numCol.firstElementChild.style.setProperty("--index", `${-1}`);
+infoCol.firstElementChild.style.setProperty("--index", `${-1}`);
 
 scrollableDiv.append(scrollableDiv.children[2].cloneNode(true));
+scrollableDiv.append(scrollableDiv.children[3].cloneNode(true));
 numCol.append(numCol.children[2].cloneNode(true));
 imgCol.append(imgCol.children[2].cloneNode(true));
 infoCol.append(infoCol.children[2].cloneNode(true));
@@ -58,6 +61,8 @@ imgCol.lastElementChild.style.setProperty(
   `${29 * anglesBtwn}deg`
 );
 imgCol.lastElementChild.style.setProperty("--index", `${29}`);
+numCol.lastElementChild.style.setProperty("--index", `${29}`);
+infoCol.lastElementChild.style.setProperty("--index", `${29}`);
 
 main.scrollLeft = scrollableDiv.firstElementChild.clientWidth;
 // Scroll listener
@@ -68,7 +73,6 @@ main.addEventListener("scroll", (event) => {
 
   // If bottom reached
   if (totalWidth - scrollLocation <= containerWidth * 2) {
-    console.log("hi");
     imgCol.firstElementChild.style.setProperty("visibility", "hidden");
     imgCol.children[1].style.setProperty("visibility", "hidden");
     imgCol.children[2].style.setProperty("visibility", "hidden");
@@ -83,7 +87,6 @@ main.addEventListener("scroll", (event) => {
       "visible"
     );
   } else {
-    console.log("bye");
     imgCol.firstElementChild.style.setProperty("visibility", "visible");
     imgCol.children[1].style.setProperty("visibility", "visible");
     imgCol.children[2].style.setProperty("visibility", "visible");
