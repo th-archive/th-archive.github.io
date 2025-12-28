@@ -13,7 +13,7 @@
   --bg-color: papayawhip;
   --rotation: 0deg;
   --index: 0;
-  --num-items: 19;
+  --num-items: 29;
 }
 
 html {
@@ -265,7 +265,6 @@ div.middle.menu {
   aspect-ratio: 2/3;
   object-fit: cover;
   height: calc((100dvh - 6em) / 2);
-  border: 1px solid var(--fg-color);
   background-color: var(--bg-color);
   animation: imgRotate both linear 1ms;
   animation-timeline: --readTimeline;
