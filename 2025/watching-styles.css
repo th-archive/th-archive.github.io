@@ -180,12 +180,20 @@ main main {
   top: calc(100% / 2);
 }
 
+.info p {
+  line-height: 1.25;
+}
+
 sup {
   text-transform: uppercase;
   top: 0;
   margin-top: 0.5em;
   display: block;
   line-height: 1.1;
+}
+
+sub {
+  bottom: 0.25em;
 }
 
 .img-container {

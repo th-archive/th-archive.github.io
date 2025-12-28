@@ -137,7 +137,7 @@ main {
 
 .scrollable {
   width: 100%;
-  height: 6000px;
+  height: 9000px;
   align-self: start;
 }
 
@@ -241,6 +241,20 @@ main {
 .concentric:nth-of-type(4) .song-info,
 .concentric:nth-of-type(4) .song-info::after {
   animation-range: 3000px 9000px;
+}
+
+.concentric:nth-of-type(5),
+.concentric:nth-of-type(5) .song-container,
+.concentric:nth-of-type(5) .song-info,
+.concentric:nth-of-type(5) .song-info::after {
+  animation-range: 4500px 10500px;
+}
+
+.concentric:nth-of-type(6),
+.concentric:nth-of-type(6) .song-container,
+.concentric:nth-of-type(6) .song-info,
+.concentric:nth-of-type(6) .song-info::after {
+  animation-range: 6000px 12000px;
 }
 
 .concentric:nth-of-type(1) {
