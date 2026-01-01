@@ -58,11 +58,24 @@ infoCol.append(infoCol.children[2].cloneNode(true));
 
 imgCol.lastElementChild.style.setProperty(
   "--rotation",
-  `${29 * anglesBtwn}deg`
+  `${(imgs.length + 1) * anglesBtwn}deg`
 );
-imgCol.lastElementChild.style.setProperty("--index", `${29}`);
-numCol.lastElementChild.style.setProperty("--index", `${29}`);
-infoCol.lastElementChild.style.setProperty("--index", `${29}`);
+imgCol.lastElementChild.style.setProperty("--index", `${imgs.length + 1}`);
+numCol.lastElementChild.style.setProperty("--index", `${imgs.length + 1}`);
+infoCol.lastElementChild.style.setProperty("--index", `${imgs.length + 1}`);
+
+scrollableDiv.append(scrollableDiv.children[4].cloneNode(true));
+numCol.append(numCol.children[3].cloneNode(true));
+imgCol.append(imgCol.children[3].cloneNode(true));
+infoCol.append(infoCol.children[3].cloneNode(true));
+
+imgCol.lastElementChild.style.setProperty(
+  "--rotation",
+  `${(imgs.length + 2) * anglesBtwn}deg`
+);
+imgCol.lastElementChild.style.setProperty("--index", `${imgs.length + 2}`);
+numCol.lastElementChild.style.setProperty("--index", `${imgs.length + 2}`);
+infoCol.lastElementChild.style.setProperty("--index", `${imgs.length + 2}`);
 
 main.scrollLeft = scrollableDiv.firstElementChild.clientWidth;
 // Scroll listener
@@ -76,6 +89,7 @@ main.addEventListener("scroll", (event) => {
     imgCol.firstElementChild.style.setProperty("visibility", "hidden");
     imgCol.children[1].style.setProperty("visibility", "hidden");
     imgCol.children[2].style.setProperty("visibility", "hidden");
+    imgCol.children[3].style.setProperty("visibility", "hidden");
 
     imgCol.lastElementChild.style.setProperty("visibility", "visible");
     imgCol.children[imgCol.childElementCount - 3].style.setProperty(
@@ -86,10 +100,15 @@ main.addEventListener("scroll", (event) => {
       "visibility",
       "visible"
     );
+    imgCol.children[imgCol.childElementCount - 4].style.setProperty(
+      "visibility",
+      "visible"
+    );
   } else {
     imgCol.firstElementChild.style.setProperty("visibility", "visible");
     imgCol.children[1].style.setProperty("visibility", "visible");
     imgCol.children[2].style.setProperty("visibility", "visible");
+    imgCol.children[3].style.setProperty("visibility", "visible");
 
     imgCol.lastElementChild.style.setProperty("visibility", "hidden");
     imgCol.children[imgCol.childElementCount - 3].style.setProperty(
@@ -97,6 +116,10 @@ main.addEventListener("scroll", (event) => {
       "hidden"
     );
     imgCol.children[imgCol.childElementCount - 2].style.setProperty(
+      "visibility",
+      "hidden"
+    );
+    imgCol.children[imgCol.childElementCount - 4].style.setProperty(
       "visibility",
       "hidden"
     );
@@ -108,7 +131,7 @@ main.addEventListener("scroll", (event) => {
     });
   } else if (scrollLocation === 0) {
     event.target.scrollTo({
-      left: 28 * scrollableDiv.firstElementChild.clientWidth,
+      left: imgs.length * scrollableDiv.firstElementChild.clientWidth,
     });
   }
 });
