@@ -12,7 +12,7 @@
   --bg-color: #717100;
   --fg-color: lavender;
   --num-items: 2;
-  --total-num-items: 29;
+  --total-num-items: 30;
   --leftover-items: calc(var(--total-num-items) - var(--num-items));
 }
 
