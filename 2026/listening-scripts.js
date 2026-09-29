@@ -144,8 +144,17 @@ const loadAlphabet = () => {
 
 loadAlphabet();
 
-const populateText = () => {
+const addRing = (ringIndex) => {
   const textContainer = document.querySelector(".text-container");
+  const newRing = document.createElement("div");
+  newRing.classList.add("ring");
+  textContainer.appendChild(newRing);
+  newRing.style.width = `calc(min(100vw - 2em, 100dvh - 5em) - 4em - 1em - ${ringIndex * 2}em)`;
+  newRing.style.height = `calc(min(100vw - 2em, 100dvh - 5em) - 4em - 1em - ${ringIndex * 2}em)`;
+  return newRing;
+};
+
+const populateText = () => {
   const width = document
     .querySelector(".cd-img-container")
     .getBoundingClientRect().width;
@@ -159,13 +168,15 @@ const populateText = () => {
   console.log("numChars", numChars);
   let rot = 0;
   let space = 0;
-  let randIndex = 0;
-  let rand = randomArr[randIndex];
+  let ringIndex = 0;
+  let rand = randomArr[ringIndex];
+
+  let newRing = addRing(ringIndex);
 
   for (let i = 0; i < text.length; i++) {
     const textObj = text[i];
     let compiledText =
-      "(" +
+      " (" +
       (i + 1) +
       ")" +
       " " +
@@ -184,24 +195,37 @@ const populateText = () => {
       if (circumference < 0) {
         return;
       }
-      console.log("circumference", circumference);
 
       numChars = circumference / charWidth;
-      console.log("numChars", numChars);
       if (numChars < compiledText.length) {
         return;
       }
-      randIndex++;
-      rand = randomArr[randIndex];
+      ringIndex++;
+      newRing = addRing(ringIndex);
+      rand = randomArr[ringIndex];
     }
 
     for (let j = 0; j < compiledText.length; j++) {
       const newChar = document.createElement("p");
+
       newChar.textContent = compiledText[j];
       newChar.style.transform = `rotate(${-rot / numChars + rand}turn) translateY(calc(${width * 0.5}px - ${space}em - 0.5em)) `;
       rot += 1;
 
-      textContainer.appendChild(newChar);
+      newRing.appendChild(newChar);
+      newChar.classList.add(`no-${i + 1}`);
+      newChar.onmouseenter = function () {
+        const sameNumberArr = document.getElementsByClassName(`no-${i + 1}`);
+        for (let l = 0; l < sameNumberArr.length; l++) {
+          sameNumberArr[l].classList.add("highlighted");
+        }
+      };
+      newChar.onmouseleave = function () {
+        const sameNumberArr = document.getElementsByClassName(`no-${i + 1}`);
+        for (let l = 0; l < sameNumberArr.length; l++) {
+          sameNumberArr[l].classList.remove("highlighted");
+        }
+      };
     }
   }
 
@@ -210,6 +234,16 @@ const populateText = () => {
   // for each ring:
   //    for each character in compiledText:
   //        rotate character and push out by amt to get to ring
+
+  const cdImgContainer = document.querySelector(".cd-img-container");
+  cdImgContainer.style.setProperty(
+    "--hover-blocker-dim",
+    `calc(min(100vw - 2em, 100dvh - 5em) - 4em - 3em - ${ringIndex * 2}em)`,
+  );
+  while (ringIndex < 10) {
+    ringIndex++;
+    newRing = addRing(ringIndex);
+  }
 };
 
 populateText();
