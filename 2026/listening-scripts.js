@@ -5,6 +5,11 @@ const alphabet = {
   specialCharacters: "",
 };
 
+let inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
+if (window.innerWidth <= 576) {
+  inset = "calc(min(100vw - 2em, 100dvh - 5em)";
+}
+
 const randomArr = [];
 for (let i = 0; i < 20; i++) {
   randomArr.push(Math.random());
@@ -149,8 +154,14 @@ const addRing = (ringIndex) => {
   const newRing = document.createElement("div");
   newRing.classList.add("ring");
   textContainer.appendChild(newRing);
-  newRing.style.width = `calc(min(100vw - 2em, 100dvh - 5em) - 4em - 1em - ${ringIndex * 2}em)`;
-  newRing.style.height = `calc(min(100vw - 2em, 100dvh - 5em) - 4em - 1em - ${ringIndex * 2}em)`;
+  if (window.innerWidth <= 576) {
+    newRing.style.width = `${inset} - 0.5em - ${ringIndex * 1.4}em)`;
+    newRing.style.height = `${inset} - 0.5em - ${ringIndex * 1.4}em)`;
+  } else {
+    newRing.style.width = `${inset} - 0.75em - ${ringIndex * 2.1}em)`;
+    newRing.style.height = `${inset} - 0.75em - ${ringIndex * 2.1}em)`;
+  }
+
   return newRing;
 };
 
@@ -238,7 +249,7 @@ const populateText = () => {
   const cdImgContainer = document.querySelector(".cd-img-container");
   cdImgContainer.style.setProperty(
     "--hover-blocker-dim",
-    `calc(min(100vw - 2em, 100dvh - 5em) - 4em - 3em - ${ringIndex * 2}em)`,
+    `${inset} - 3em - ${ringIndex * 2}em)`,
   );
   while (ringIndex < 10) {
     ringIndex++;
@@ -252,4 +263,10 @@ window.addEventListener("resize", () => {
   const textContainer = document.querySelector(".text-container");
   textContainer.replaceChildren();
   populateText();
+
+  if (window.innerWidth <= 576) {
+    inset = "calc(min(100vw - 2em, 100dvh - 5em)";
+  } else {
+    inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
+  }
 });

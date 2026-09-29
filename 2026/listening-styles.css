@@ -12,6 +12,7 @@
   --fg-color: lightskyblue;
   --bg-color: #ae2111;
   --hover-blocker-dim: 0px;
+  --inset: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
 }
 
 html {
@@ -121,7 +122,6 @@ div.middle.menu {
   clear: both;
 }
 
-.container-fluid.main,
 main {
   margin: 1em;
   width: calc(100vw - 2em);
@@ -135,9 +135,18 @@ main {
   justify-content: center;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
 .cd-img-container {
-  width: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
-  height: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
+  width: var(--inset);
+  height: var(--inset);
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -168,13 +177,21 @@ main {
 
 .text-container,
 .ring {
-  width: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
-  height: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
+  width: var(--inset);
+  height: var(--inset);
   position: absolute;
   display: flex;
   align-items: center;
   border-radius: 100%;
   justify-content: center;
+}
+
+.text-container {
+  animation: rotate 60s infinite linear;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
 .text-container:hover {
@@ -206,8 +223,20 @@ main {
   margin: 0;
   font-family: monospace;
   font-size: smaller;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   transition: color 0.25s ease;
+  z-index: 5;
+}
+
+@media (max-width: 576px) {
+  * {
+    --inset: calc(min(100vw - 2em, 100dvh - 5em));
+  }
+
+  .alphabet,
+  .text-container p {
+    font-size: xx-small;
+  }
 }
 
 /* .scrollable {
