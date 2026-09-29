@@ -136,14 +136,16 @@ main {
 
 .alphabet {
   position: fixed;
-  /* display: none; */
+  visibility: hidden;
+  font-family: monospace;
+  font-size: smaller;
+  pointer-events: none;
 }
 
 .cd-img-container {
   width: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
   height: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
   border-radius: 100%;
-  background-color: pink;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,8 +162,6 @@ main {
 .text-container {
   width: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
   height: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
-  background-color: red;
-  opacity: 0.5;
   position: absolute;
   display: flex;
   align-items: center;
@@ -172,6 +172,8 @@ main {
   position: absolute;
   margin: 0;
   font-family: monospace;
+  font-size: smaller;
+  background-color: var(--bg-color);
 }
 
 /* .scrollable {

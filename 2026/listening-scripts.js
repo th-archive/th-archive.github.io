@@ -4,6 +4,11 @@ const alphabet = {
   numbers: "0123456789",
   specialCharacters: "",
 };
+
+const randomArr = [];
+for (let i = 0; i < 20; i++) {
+  randomArr.push(Math.random());
+}
 const text = [
   {
     title: "CHROMAKOPIA",
@@ -153,29 +158,50 @@ const populateText = () => {
   let numChars = circumference / charWidth;
   console.log("numChars", numChars);
   let rot = 0;
-
   let space = 0;
+  let randIndex = 0;
+  let rand = randomArr[randIndex];
 
   for (let i = 0; i < text.length; i++) {
     const textObj = text[i];
-    const compiledText =
-      i + 1 + " " + textObj.title + " " + textObj.artist + " " + textObj.type;
+    let compiledText =
+      "(" +
+      (i + 1) +
+      ")" +
+      " " +
+      textObj.title +
+      " • " +
+      textObj.artist +
+      " • " +
+      textObj.type +
+      " ";
+    compiledText = compiledText.replaceAll(" ", "\u00A0");
 
     if ((rot + compiledText.length) / numChars >= 1) {
-      space += 1.5;
+      space += 1.25;
       rot = 0;
       circumference = 2 * Math.PI * (width * 0.5 - space * em - 0.5 * em);
+      if (circumference < 0) {
+        return;
+      }
       console.log("circumference", circumference);
+
       numChars = circumference / charWidth;
+      console.log("numChars", numChars);
+      if (numChars < compiledText.length) {
+        return;
+      }
+      randIndex++;
+      rand = randomArr[randIndex];
     }
 
     for (let j = 0; j < compiledText.length; j++) {
-      const newParagraph = document.createElement("p");
-      newParagraph.textContent = compiledText[j];
-      newParagraph.style.transform = `rotate(${-rot / numChars}turn) translateY(calc(${width / 2}px - ${space}em - 0.5em)) `;
+      const newChar = document.createElement("p");
+      newChar.textContent = compiledText[j];
+      newChar.style.transform = `rotate(${-rot / numChars + rand}turn) translateY(calc(${width * 0.5}px - ${space}em - 0.5em)) `;
       rot += 1;
 
-      textContainer.appendChild(newParagraph);
+      textContainer.appendChild(newChar);
     }
   }
 
