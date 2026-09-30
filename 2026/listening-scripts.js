@@ -383,7 +383,8 @@ const populateText = () => {
         );
         miniTextNumber.innerHTML = `<sup>( ${i + 1} )</sup>`;
         miniTextTitle.innerHTML = text[i].title;
-        miniTextArtistType.innerHTML = text[i].artist + " • " + text[i].type;
+        miniTextArtistType.innerHTML =
+          "<sub>" + text[i].artist + " • " + text[i].type + "</sub>";
 
         miniTextContainer.classList.add("highlighted");
       };
@@ -396,16 +397,6 @@ const populateText = () => {
         const miniTextContainer = document.querySelector(
           ".mini-text-container",
         );
-        const miniTextNumber = document.querySelector(
-          ".mini-text-container .number",
-        );
-        const miniTextTitle = document.querySelector(
-          ".mini-text-container .title",
-        );
-        const miniTextArtistType = document.querySelector(
-          ".mini-text-container .artist-type",
-        );
-
         miniTextContainer.classList.remove("highlighted");
       };
     }
@@ -427,11 +418,6 @@ const populateText = () => {
       "--hover-blocker-dim",
       `${inset} - 2em - ${ringIndex * 1.55}em)`,
     );
-  }
-
-  while (ringIndex < 10) {
-    ringIndex++;
-    newRing = addRing(ringIndex);
   }
 };
 

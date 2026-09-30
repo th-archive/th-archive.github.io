@@ -11,8 +11,8 @@
 }
 
 :root {
-  --fg-color: lightskyblue;
-  --bg-color: #ae2111;
+  --fg-color: rgb(199, 199, 199);
+  --bg-color: rgb(5, 22, 27);
   --hover-blocker-dim: 0px;
   --inset: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
 }
@@ -288,7 +288,11 @@ main {
     p {
       margin: 0;
       font-size: small;
-      line-height: 1.25;
+      line-height: 1;
+
+      &:first-child {
+        line-height: unset;
+      }
     }
   }
 }
