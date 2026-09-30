@@ -1,57 +1,67 @@
 const watchingLeft = document.getElementById("watching-left");
 const watchingRight = document.getElementById("watching-right");
-const watchingImgs = document.getElementById("imgs");
+const watchingImgs = document.getElementById("watching-imgs");
 const main = document.querySelector("main");
 
 const entries = [
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
     title: "Guardian: The Lonely and Great God",
     producer: "Hwa&Dam Pictures",
+    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
 ];
@@ -72,6 +82,12 @@ const loadContent = () => {
     newEntryR.innerHTML = `<p>${entries[i].producer}</p>
       <p>${entries[i].type}</p>`;
     watchingRight.appendChild(newEntryR);
+
+    const newEntryI = document.createElement("img");
+    newEntryI.classList.add(`no-${i + 1}`);
+    newEntryI.src = entries[i].img;
+    newEntryI.alt = entries[i].title;
+    watchingImgs.appendChild(newEntryI);
   }
 };
 
@@ -130,4 +146,14 @@ main.addEventListener("scrollsnapchange", (event) => {
     snapped = watchingLeft.children[3];
   }
   console.log("Active snap target:", snapped);
+
+  console.log(snapped.classList[1]);
+  const highlightedImg = document.querySelector("img.highlighted");
+  if (highlightedImg) {
+    highlightedImg.classList.remove("highlighted");
+  }
+  const img = document.querySelector(
+    `#watching-imgs img.${snapped.classList[1]}`,
+  );
+  img.classList.add("highlighted");
 });

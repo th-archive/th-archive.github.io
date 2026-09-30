@@ -133,6 +133,7 @@ main {
   height: calc(100dvh - 5em);
   overflow-y: auto;
   display: flex;
+  justify-content: space-between;
   scroll-snap-type: y proximity;
   transform: scaleY(-1);
 }
@@ -170,37 +171,37 @@ main {
 
 @keyframes conveyorAnimationL {
   0% {
-    left: 0;
+    margin-left: 0;
     filter: blur(6px);
     opacity: 0;
   }
   12.5% {
-    left: calc(14vw * var(--parabola-factor));
+    margin-left: calc(14vw * var(--parabola-factor));
   }
   25% {
-    left: calc(24vw * var(--parabola-factor));
+    margin-left: calc(24vw * var(--parabola-factor));
     filter: blur(1px);
   }
   37.5% {
-    left: calc(30vw * var(--parabola-factor));
+    margin-left: calc(30vw * var(--parabola-factor));
   }
   50% {
-    left: calc(32vw * var(--parabola-factor));
+    margin-left: calc(32vw * var(--parabola-factor));
     filter: blur(0);
     opacity: 1;
   }
   62.5% {
-    left: calc(30vw * var(--parabola-factor));
+    margin-left: calc(30vw * var(--parabola-factor));
   }
   75% {
-    left: calc(24vw * var(--parabola-factor));
+    margin-left: calc(24vw * var(--parabola-factor));
     filter: blur(1px);
   }
   87.5% {
-    left: calc(14vw * var(--parabola-factor));
+    margin-left: calc(14vw * var(--parabola-factor));
   }
   100% {
-    left: 0;
+    margin-left: 0;
     filter: blur(6px);
     opacity: 0;
   }
@@ -208,37 +209,37 @@ main {
 
 @keyframes conveyorAnimationR {
   0% {
-    right: 0;
+    margin-right: 0;
     filter: blur(6px);
     opacity: 0;
   }
   12.5% {
-    right: calc(14vw * var(--parabola-factor));
+    margin-right: calc(14vw * var(--parabola-factor));
   }
   25% {
-    right: calc(24vw * var(--parabola-factor));
+    margin-right: calc(24vw * var(--parabola-factor));
     filter: blur(1px);
   }
   37.5% {
-    right: calc(30vw * var(--parabola-factor));
+    margin-right: calc(30vw * var(--parabola-factor));
   }
   50% {
-    right: calc(32vw * var(--parabola-factor));
+    margin-right: calc(32vw * var(--parabola-factor));
     filter: blur(0);
     opacity: 1;
   }
   62.5% {
-    right: calc(30vw * var(--parabola-factor));
+    margin-right: calc(30vw * var(--parabola-factor));
   }
   75% {
-    right: calc(24vw * var(--parabola-factor));
+    margin-right: calc(24vw * var(--parabola-factor));
     filter: blur(1px);
   }
   87.5% {
-    right: calc(14vw * var(--parabola-factor));
+    margin-right: calc(14vw * var(--parabola-factor));
   }
   100% {
-    right: 0;
+    margin-right: 0;
     filter: blur(6px);
     opacity: 0;
   }
@@ -280,7 +281,8 @@ main {
 }
 
 #watching-left {
-  width: calc(50vw - 1em);
+  width: fit-content;
+  max-width: calc(50vw - 1em);
   display: flex;
   flex-direction: column;
   row-gap: calc(((100dvh - 5em) - (7 * 2.5em)) / 6);
@@ -298,7 +300,8 @@ main {
 }
 
 #watching-right {
-  width: calc(50vw - 1em);
+  width: fit-content;
+  max-width: calc(50vw - 1em);
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -310,6 +313,30 @@ main {
     }
     animation: conveyorAnimationR both linear 1ms;
     animation-timeline: view();
+  }
+}
+
+#watching-imgs {
+  width: auto;
+  flex: 1;
+
+  height: calc(100dvh - 5em);
+  transform: scaleY(-1);
+
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 2.5em;
+    position: absolute;
+    opacity: 0;
+
+    &.highlighted {
+      opacity: 1;
+    }
   }
 }
 
