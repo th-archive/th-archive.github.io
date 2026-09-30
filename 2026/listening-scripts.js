@@ -368,12 +368,45 @@ const populateText = () => {
         for (let l = 0; l < sameNumberArr.length; l++) {
           sameNumberArr[l].classList.add("highlighted");
         }
+
+        const miniTextContainer = document.querySelector(
+          ".mini-text-container",
+        );
+        const miniTextNumber = document.querySelector(
+          ".mini-text-container .number",
+        );
+        const miniTextTitle = document.querySelector(
+          ".mini-text-container .title",
+        );
+        const miniTextArtistType = document.querySelector(
+          ".mini-text-container .artist-type",
+        );
+        miniTextNumber.innerHTML = `<sup>( ${i + 1} )</sup>`;
+        miniTextTitle.innerHTML = text[i].title;
+        miniTextArtistType.innerHTML = text[i].artist + " • " + text[i].type;
+
+        miniTextContainer.classList.add("highlighted");
       };
       newChar.onmouseleave = function () {
         const sameNumberArr = document.getElementsByClassName(`no-${i + 1}`);
         for (let l = 0; l < sameNumberArr.length; l++) {
           sameNumberArr[l].classList.remove("highlighted");
         }
+
+        const miniTextContainer = document.querySelector(
+          ".mini-text-container",
+        );
+        const miniTextNumber = document.querySelector(
+          ".mini-text-container .number",
+        );
+        const miniTextTitle = document.querySelector(
+          ".mini-text-container .title",
+        );
+        const miniTextArtistType = document.querySelector(
+          ".mini-text-container .artist-type",
+        );
+
+        miniTextContainer.classList.remove("highlighted");
       };
     }
   }
