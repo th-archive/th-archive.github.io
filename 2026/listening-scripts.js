@@ -247,13 +247,25 @@ const populateText = () => {
   //        rotate character and push out by amt to get to ring
 
   const cdImgContainer = document.querySelector(".cd-img-container");
-  cdImgContainer.style.setProperty(
-    "--hover-blocker-dim",
-    `${inset} - 3em - ${ringIndex * 2}em)`,
-  );
-  while (ringIndex < 10) {
-    ringIndex++;
-    newRing = addRing(ringIndex);
+
+  if (window.innerWidth >= 576) {
+    cdImgContainer.style.setProperty(
+      "--hover-blocker-dim",
+      `${inset} - 2em - ${ringIndex * 2.1}em)`,
+    );
+    while (ringIndex < 10) {
+      ringIndex++;
+      newRing = addRing(ringIndex);
+    }
+  } else {
+    cdImgContainer.style.setProperty(
+      "--hover-blocker-dim",
+      `${inset} - 2em - ${ringIndex * 1.4}em)`,
+    );
+    while (ringIndex < 10) {
+      ringIndex++;
+      newRing = addRing(ringIndex);
+    }
   }
 };
 

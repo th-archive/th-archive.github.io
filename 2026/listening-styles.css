@@ -168,10 +168,8 @@ main {
     position: absolute;
     width: var(--hover-blocker-dim);
     height: var(--hover-blocker-dim);
-    background-color: var(--bg-color);
     z-index: 5;
     border-radius: 100%;
-    opacity: 0;
   }
 }
 
@@ -223,7 +221,7 @@ main {
   margin: 0;
   font-family: monospace;
   font-size: smaller;
-  /* background-color: var(--bg-color); */
+  background-color: var(--bg-color);
   transition: color 0.25s ease;
   z-index: 5;
 }
