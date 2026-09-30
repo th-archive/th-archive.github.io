@@ -5,10 +5,8 @@ const alphabet = {
   specialCharacters: "",
 };
 
-let inset = "calc(min(100vw - 2em, 100dvh - 5em) - 2em";
-if (window.innerWidth <= 576) {
-  inset = "calc(min(100vw - 2em, 100dvh - 5em)";
-}
+let inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
+const root = document.querySelector(":root");
 
 const randomArr = [];
 for (let i = 0; i < 20; i++) {
@@ -163,7 +161,7 @@ const text = [
     title: "With a Smile",
     artist: "Jae Woo AN",
     type: "Single",
-    img: "https://i.scdn.co/image/ab67616d0000b2735764bfb3f655e6bbc408351c",
+    img: "https://i.scdn.co/image/ab67616d0000b2737684bfb3f655e6bbc408351c",
   },
   {
     title: "365",
@@ -289,12 +287,12 @@ const addRing = (ringIndex) => {
   const newRing = document.createElement("div");
   newRing.classList.add("ring");
   textContainer.appendChild(newRing);
-  if (window.innerWidth <= 576) {
-    newRing.style.width = `${inset} - 0.5em - ${ringIndex * 1.4}em)`;
-    newRing.style.height = `${inset} - 0.5em - ${ringIndex * 1.4}em)`;
+  if (window.innerWidth <= 768) {
+    newRing.style.width = `${inset} - 0.5em - ${ringIndex * 1.55}em)`;
+    newRing.style.height = `${inset} - 0.5em - ${ringIndex * 1.55}em)`;
   } else {
-    newRing.style.width = `${inset} - 0.75em - ${ringIndex * 2.1}em)`;
-    newRing.style.height = `${inset} - 0.75em - ${ringIndex * 2.1}em)`;
+    newRing.style.width = `${inset} - 0.75em - ${ringIndex * 1.85}em)`;
+    newRing.style.height = `${inset} - 0.75em - ${ringIndex * 1.85}em)`;
   }
 
   return newRing;
@@ -332,6 +330,10 @@ const populateText = () => {
       " • " +
       textObj.type +
       " ";
+
+    if (window.innerWidth <= 576) {
+      compiledText = " (" + (i + 1) + ")" + " " + textObj.title + " ";
+    }
     compiledText = compiledText.replaceAll(" ", "\u00A0");
     compiledText += " ";
 
@@ -382,17 +384,15 @@ const populateText = () => {
   //    for each character in compiledText:
   //        rotate character and push out by amt to get to ring
 
-  const cdImgContainer = document.querySelector(".cd-img-container");
-
-  if (window.innerWidth >= 576) {
-    cdImgContainer.style.setProperty(
+  if (window.innerWidth >= 768) {
+    root.style.setProperty(
       "--hover-blocker-dim",
-      `${inset} - 2em - ${ringIndex * 2.1}em)`,
+      `${inset} - 2.5em - ${ringIndex * 1.85}em)`,
     );
   } else {
-    cdImgContainer.style.setProperty(
+    root.style.setProperty(
       "--hover-blocker-dim",
-      `${inset} - 2em - ${ringIndex * 1.4}em)`,
+      `${inset} - 2em - ${ringIndex * 1.55}em)`,
     );
   }
 
@@ -423,21 +423,21 @@ window.addEventListener("resize", () => {
   textContainer.replaceChildren();
   populateText();
 
-  if (window.innerWidth <= 576) {
-    inset = "calc(min(100vw - 2em, 100dvh - 5em)";
+  if (window.innerWidth <= 768) {
+    inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
   } else {
-    inset = "calc(min(100vw - 2em, 100dvh - 5em) - 2em";
+    inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
   }
 
-  if (window.innerWidth >= 576) {
-    cdImgContainer.style.setProperty(
+  if (window.innerWidth >= 768) {
+    root.style.setProperty(
       "--hover-blocker-dim",
-      `${inset} - 2em - ${ringIndex * 2.1}em)`,
+      `${inset} - 2em - ${ringIndex * 1.85}em)`,
     );
   } else {
-    cdImgContainer.style.setProperty(
+    root.style.setProperty(
       "--hover-blocker-dim",
-      `${inset} - 2em - ${ringIndex * 1.4}em)`,
+      `${inset} - 2em - ${ringIndex * 1.55}em)`,
     );
   }
 });
