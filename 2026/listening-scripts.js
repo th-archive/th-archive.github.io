@@ -16,109 +16,10 @@ for (let i = 0; i < 20; i++) {
 }
 const text = [
   {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
-  },
-  {
-    title: "CHROMAKOPIA",
-    artist: "Tyler, the Creator",
-    type: "Album",
+    title: "ABCD",
+    artist: "Cosmic Boy, Chan, SHIRT",
+    type: "Single",
+    img: "https://i.scdn.co/image/ab67616d0000b273bddb2e39d633fb1b0eea7959",
   },
 ];
 
@@ -253,23 +154,34 @@ const populateText = () => {
       "--hover-blocker-dim",
       `${inset} - 2em - ${ringIndex * 2.1}em)`,
     );
-    while (ringIndex < 10) {
-      ringIndex++;
-      newRing = addRing(ringIndex);
-    }
   } else {
     cdImgContainer.style.setProperty(
       "--hover-blocker-dim",
       `${inset} - 2em - ${ringIndex * 1.4}em)`,
     );
-    while (ringIndex < 10) {
-      ringIndex++;
-      newRing = addRing(ringIndex);
-    }
+  }
+
+  while (ringIndex < 10) {
+    ringIndex++;
+    newRing = addRing(ringIndex);
   }
 };
 
 populateText();
+
+const populateImages = () => {
+  const imgContainer = document.querySelector(".cd-img-container");
+
+  for (let i = 0; i < text.length; i++) {
+    const newImg = document.createElement("img");
+    newImg.src = text[i].img;
+    newImg.alt = text[i].title;
+    newImg.classList.add(`no-${i + 1}`);
+    imgContainer.appendChild(newImg);
+  }
+};
+
+populateImages();
 
 window.addEventListener("resize", () => {
   const textContainer = document.querySelector(".text-container");
@@ -280,5 +192,17 @@ window.addEventListener("resize", () => {
     inset = "calc(min(100vw - 2em, 100dvh - 5em)";
   } else {
     inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
+  }
+
+  if (window.innerWidth >= 576) {
+    cdImgContainer.style.setProperty(
+      "--hover-blocker-dim",
+      `${inset} - 2em - ${ringIndex * 2.1}em)`,
+    );
+  } else {
+    cdImgContainer.style.setProperty(
+      "--hover-blocker-dim",
+      `${inset} - 2em - ${ringIndex * 1.4}em)`,
+    );
   }
 });

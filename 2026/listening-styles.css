@@ -152,13 +152,29 @@ main {
   align-items: center;
   justify-content: center;
 
+  img {
+    border-radius: 100%;
+    position: absolute;
+    width: calc(var(--inset) - 4em - (2.1 * 9.5em));
+    height: calc(var(--inset) - 4em - (2.1 * 9.5em));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    animation: rotate 60s linear infinite;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+
+    &.highlighted {
+      opacity: 1;
+      animation-play-state: running;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
-    width: 6em;
-    height: 6em;
+    width: min(5vw, 5dvh);
+    height: min(5vw, 5dvh);
     background-color: var(--bg-color);
-    background-color: black;
     z-index: 5;
     border-radius: 100%;
   }
@@ -186,6 +202,7 @@ main {
 
 .text-container {
   animation: rotate 60s infinite linear;
+  animation-fill-mode: both;
 
   &:hover {
     animation-play-state: paused;
@@ -234,6 +251,11 @@ main {
   .alphabet,
   .text-container p {
     font-size: xx-small;
+  }
+
+  .cd-img-container img {
+    width: calc(var(--inset) - 2em - (1.4 * 10em));
+    height: calc(var(--inset) - 2em - (1.4 * 10em));
   }
 }
 
