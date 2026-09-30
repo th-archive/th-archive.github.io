@@ -12,7 +12,7 @@
   --fg-color: lightskyblue;
   --bg-color: #ae2111;
   --hover-blocker-dim: 0px;
-  --inset: calc(min(100vw - 2em, 100dvh - 5em) - 4em);
+  --inset: calc(min(100vw - 2em, 100dvh - 5em) - 2em);
 }
 
 html {
@@ -155,8 +155,8 @@ main {
   img {
     border-radius: 100%;
     position: absolute;
-    width: calc(var(--inset) - 4em - (2.1 * 9.5em));
-    height: calc(var(--inset) - 4em - (2.1 * 9.5em));
+    width: calc(var(--inset) - 2em - (2.1 * 9.5em));
+    height: calc(var(--inset) - 2em - (2.1 * 9.5em));
     opacity: 0;
     transition: opacity 0.25s ease;
     animation: rotate 60s linear infinite;
@@ -250,7 +250,23 @@ main {
 
   .alphabet,
   .text-container p {
-    font-size: xx-small;
+    font-size: x-small;
+  }
+
+  .cd-img-container img {
+    width: calc(var(--inset) - 2em - (1.4 * 10em));
+    height: calc(var(--inset) - 2em - (1.4 * 10em));
+  }
+}
+
+@media (max-width: 576px) {
+  * {
+    --inset: calc(min(100vw - 2em, 100dvh - 5em));
+  }
+
+  .alphabet,
+  .text-container p {
+    font-size: 8px;
   }
 
   .cd-img-container img {
