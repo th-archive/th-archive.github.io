@@ -164,6 +164,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: rotate 60s linear infinite;
+  animation-fill-mode: both;
 
   img {
     border-radius: 100%;
@@ -172,14 +174,10 @@ main {
     height: var(--hover-blocker-dim);
     opacity: 0;
     transition: opacity 0.25s ease;
-    animation: rotate 60s linear infinite;
-    animation-play-state: paused;
-    animation-fill-mode: both;
     z-index: 2;
 
     &.highlighted {
       opacity: 1;
-      animation-play-state: running;
     }
   }
 
