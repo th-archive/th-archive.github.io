@@ -10,7 +10,7 @@ const text = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0yF1MQ6NF5TxkknmMj6qJzvEw28Uo71FNmPCBCckBK4awmlyHduuP5aDr&s=10",
   },
   {
-    title: "Rei Kawakubo/Comme des Garçons: Art of the In-Between",
+    title: "Rei Kawakubo / Comme des Garçons: Art of the In- Between",
     author: "Andrew Bolton",
     img: "https://t0k10.com/cdn/shop/products/Format-accessoires-book-5_1024x1024.jpg?v=1496059207",
   },
