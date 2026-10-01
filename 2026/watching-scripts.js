@@ -54,15 +54,15 @@ const loadContent = () => {
     const newEntryL = document.createElement("div");
     newEntryL.classList.add("entry");
     newEntryL.classList.add(`no-${i + 1}`);
-    newEntryL.innerHTML = `<p>${i + 1}</p>
+    newEntryL.innerHTML = `<p>${i + 1} »</p>
       <p>${entries[i].title}</p>`;
     watchingLeft.appendChild(newEntryL);
 
     const newEntryR = document.createElement("div");
     newEntryR.classList.add("entry");
     newEntryR.classList.add(`no-${i + 1}`);
-    newEntryR.innerHTML = `<p>${entries[i].producer}</p>
-      <p>${entries[i].type}</p>`;
+    newEntryR.innerHTML = `<p>${entries[i].type}</p>
+      <p>${entries[i].producer}</p>`;
     watchingRight.appendChild(newEntryR);
 
     const newEntryI = document.createElement("img");
