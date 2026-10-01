@@ -336,6 +336,7 @@ main {
 
     &.highlighted {
       opacity: 1;
+      transition: all 0.25s ease;
     }
   }
 }

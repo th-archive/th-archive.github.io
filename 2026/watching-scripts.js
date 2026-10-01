@@ -5,69 +5,51 @@ const main = document.querySelector("main");
 
 const entries = [
   {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
+    title: "Do the Right Thing",
+    producer: "40 Acres and a Mule Filmworks",
+    img: "https://m.media-amazon.com/images/M/MV5BODA2MjU1NTI1MV5BMl5BanBnXkFtZTgwOTU4ODIwMjE@._V1_FMjpg_UX1000_.jpg",
     type: "TV Show",
   },
   {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
+    title: "Community",
+    producer: "Krasnoff/Foster Entertainment",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-YpeX4gVVB92oRmcxvyPDTql6_mL3BE084xw8cnHqsX7vOFiDeHd2sWU&s=10",
     type: "TV Show",
   },
   {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
+    title: "Can This Love Be Translated?",
+    producer: "Studio Sot",
+    img: "https://m.media-amazon.com/images/M/MV5BNDBhMDhmMzMtYTRjZS00NTZhLTllNjAtNDkxODVkYTdmY2Q2XkEyXkFqcGc@._V1_.jpg",
     type: "TV Show",
   },
   {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
+    title: "Chainsaw Man — The Movie: Reze Arc",
+    producer: "MAPPA",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgOTJqvkcWj-TqAa-YOLZzvt1EneVb0LCuvfO_-TX0hsBEX36kzw7lhw2A&s=10",
+    type: "Movie",
+  },
+  {
+    title: "In Your Radiant Season",
+    producer: "Pan Entertainment",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxzHuPUeKe_v_WiKY4VHuY3DCo-LYUBqerUjGJkMWQc6KR75I-TpCwSZ8&s=10",
     type: "TV Show",
   },
   {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
-    type: "TV Show",
+    title: "18×2 Beyond Youthful Days",
+    producer: "Jump! Boys",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlF7ecV0Zujv-1Sy4qkk9e_pCkrjdffOoyS0lZr04YrwLFpKJUoRX_V3YL&s=10",
+    type: "Movie",
   },
   {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
-    type: "TV Show",
-  },
-  {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
-    type: "TV Show",
-  },
-  {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
-    type: "TV Show",
-  },
-  {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
-    type: "TV Show",
-  },
-  {
-    title: "Guardian: The Lonely and Great God",
-    producer: "Hwa&Dam Pictures",
-    img: "https://m.media-amazon.com/images/M/MV5BNWIyNTA3MmItNzY5ZS00NmZhLThjMWYtZjIxYzllZWU5YWIzXkEyXkFqcGc@._V1_.jpg",
+    title: "Takopi's Original Sin",
+    producer: "Enishiya",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsSuWu5QkKy8vkGU0SL2_JWxKEx-skJsrmJaJWqMtncvvTPPdNGZTf8LM&s=10",
     type: "TV Show",
   },
 ];
 
 const loadContent = () => {
-  for (let j = 0; j < entries.length; j++) {
+  for (let j = entries.length - 3; j < entries.length * 2 - 3; j++) {
     const i = j % entries.length;
     const newEntryL = document.createElement("div");
     newEntryL.classList.add("entry");
@@ -110,7 +92,7 @@ itemsR.forEach((item) => {
 //   watchingImgs.appendChild(clone);
 // });
 
-const firstClone = watchingLeft.children[12];
+const firstClone = watchingLeft.children[entries.length];
 const originalHeight = firstClone.offsetTop;
 
 let isResetting = false;
@@ -119,8 +101,10 @@ main.addEventListener("scroll", () => {
   if (isResetting) return;
 
   const scrollTop = main.scrollTop;
+  watchingImgs.style.opacity = "0";
 
   if (scrollTop >= originalHeight || scrollTop < 0) {
+    console.log("reset");
     isResetting = true;
 
     main.style.scrollSnapType = "none";
@@ -138,20 +122,22 @@ main.addEventListener("scroll", () => {
   }
 });
 
+main.addEventListener("scrollend", () => {
+  watchingImgs.style.opacity = "1";
+});
+
 main.addEventListener("scrollsnapchange", (event) => {
   // Returns the snapped element in the block (vertical/horizontal layout dependent) direction
   let snapped = event.snapTargetBlock;
-  console.log(main.scrollTop);
   if (main.scrollTop < 5) {
     snapped = watchingLeft.children[3];
   }
-  console.log("Active snap target:", snapped);
 
-  console.log(snapped.classList[1]);
   const highlightedImg = document.querySelector("img.highlighted");
   if (highlightedImg) {
     highlightedImg.classList.remove("highlighted");
   }
+
   const img = document.querySelector(
     `#watching-imgs img.${snapped.classList[1]}`,
   );
