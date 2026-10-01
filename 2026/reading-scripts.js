@@ -87,9 +87,6 @@ const bottomRow = document.querySelector(".bottom-row");
 
 const infoCol = document.querySelector(".info-column");
 
-requestAnimationFrame(() => {
-  scrollSpacer.style.height = main.scrollHeight + "px";
-});
 const boxArr = [topRow, leftCol, rightCol, bottomRow];
 
 // 1. Fixed baseline height in px (8rem = 128px)
@@ -144,6 +141,11 @@ const populateText = () => {
 
 // Initial page load render
 populateText();
+
+requestAnimationFrame(() => {
+  scrollSpacer.style.height = main.scrollHeight + "px";
+  console.log(main.scrollHeight);
+});
 
 // 2. LIVE expansion while user scrolls
 let ticking = false;
