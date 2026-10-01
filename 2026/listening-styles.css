@@ -164,8 +164,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: rotate 60s linear infinite;
-  animation-fill-mode: both;
 
   img {
     border-radius: 100%;
@@ -175,6 +173,8 @@ main {
     opacity: 0;
     transition: opacity 0.25s ease;
     z-index: 2;
+    animation: rotate 60s linear infinite;
+    animation-fill-mode: both;
 
     &.highlighted {
       opacity: 1;
