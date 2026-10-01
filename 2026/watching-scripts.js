@@ -8,7 +8,7 @@ const entries = [
     title: "Do the Right Thing",
     producer: "40 Acres and a Mule Filmworks",
     img: "https://m.media-amazon.com/images/M/MV5BODA2MjU1NTI1MV5BMl5BanBnXkFtZTgwOTU4ODIwMjE@._V1_FMjpg_UX1000_.jpg",
-    type: "TV Show",
+    type: "Movie",
   },
   {
     title: "Community",
