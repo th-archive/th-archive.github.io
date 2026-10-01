@@ -127,7 +127,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   column-gap: 1em;
 }
 
@@ -140,7 +140,7 @@ main {
   display: flex;
   flex-wrap: wrap;
 
-  &::before {
+  /* &::before {
     content: "";
     position: fixed;
     top: 5em;
@@ -148,6 +148,7 @@ main {
     height: 4.5em;
     z-index: 5;
     background-color: var(--bg-color);
+    pointer-events: none;
   }
 
   &::after {
@@ -157,7 +158,8 @@ main {
     width: calc(100vw - 30em);
     height: 4.5em;
     background-color: var(--bg-color);
-  }
+    pointer-events: none;
+  } */
 
   h2 {
     margin: 0;
@@ -175,10 +177,22 @@ main {
 .text-container {
   display: flex;
   flex-wrap: wrap;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   /* overflow: hidden; */
   align-content: start;
   justify-content: space-between;
+}
+
+.info-column:hover {
+  h2,
+  span {
+    opacity: 0.5;
+  }
+
+  h2.highlighted,
+  span.highlighted {
+    opacity: 1;
+  }
 }
 
 .top-row {
@@ -193,7 +207,8 @@ main {
   /* grid-row: 3;
   grid-column: 1 / 4; */
   padding-bottom: 6.5em;
-  height: fit-content;
+  height: 8rem;
+  overflow: hidden;
 }
 
 .left-col {

@@ -76,8 +76,8 @@ const text = [
   },
 ];
 
-const scrollTracker = document.querySelector(".scroll-tracker");
-const scrollSpacer = document.querySelector(".scroll-spacer");
+// const scrollTracker = document.querySelector(".scroll-tracker");
+// const scrollSpacer = document.querySelector(".scroll-spacer");
 const main = document.querySelector("main");
 const topRow = document.querySelector(".top-row");
 const leftCol = document.querySelector(".left-col");
@@ -99,18 +99,20 @@ const clearText = () => {
   }
 };
 
+let offset = 0;
 const populateText = () => {
   let activeIdx = 0;
   let activeBox = boxArr[activeIdx];
 
   // Set top row height directly based on current scroll track position
-  const currentScroll = scrollTracker.scrollTop;
-  topRow.style.height = `${BASE_TOP_HEIGHT + currentScroll}px`;
+  // const currentScroll = scrollTracker.scrollTop;
+  // topRow.style.height = `${BASE_TOP_HEIGHT + currentScroll}px`;
 
   // Force layout flush so clientHeight reads accurately immediately
-  void topRow.offsetHeight;
+  // void topRow.offsetHeight;
 
-  for (let i = 0; i < text.length; i++) {
+  for (let j = offset; j < text.length + offset; j++) {
+    const i = j % text.length;
     const textObj = text[i];
     let number = i + 1 < 10 ? "0" + (i + 1) : i + 1;
     const fullText = `${number} ${textObj.title} ${textObj.author}`;
@@ -118,10 +120,26 @@ const populateText = () => {
 
     for (let j = 0; j < textArr.length; j++) {
       const newElt = document.createElement("h2");
+      newElt.classList.add(`no-${i}`);
+      newElt.addEventListener("mouseenter", () => {
+        const sameNo = document.querySelectorAll(`.no-${i}`);
+        console.log(sameNo.length);
+        for (let k = 0; k < sameNo.length; k++) {
+          sameNo[k].classList.add("highlighted");
+        }
+      });
+      newElt.addEventListener("mouseleave", () => {
+        const sameNo = document.querySelectorAll(`.no-${i}`);
+        console.log(sameNo.length);
+        for (let k = 0; k < sameNo.length; k++) {
+          sameNo[k].classList.remove("highlighted");
+        }
+      });
       newElt.textContent = textArr[j];
       activeBox.appendChild(newElt);
 
       const filler = document.createElement("span");
+      filler.classList.add(`no-${i}`);
       filler.classList.add("filler");
       activeBox.appendChild(filler);
 
@@ -142,32 +160,51 @@ const populateText = () => {
 // Initial page load render
 populateText();
 
-requestAnimationFrame(() => {
-  scrollSpacer.style.height = main.scrollHeight + "px";
-  console.log(main.scrollHeight);
-});
+// requestAnimationFrame(() => {
+//   scrollSpacer.style.height = main.scrollHeight + "px";
+//   console.log(main.scrollHeight);
+// });
 
 // 2. LIVE expansion while user scrolls
-let ticking = false;
-scrollTracker.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      topRow.style.height = `${BASE_TOP_HEIGHT + scrollTracker.scrollTop}px`;
-      clearText();
-      populateText();
-      main.scrollTop = scrollTracker.scrollTop;
+// let ticking = false;
+// scrollTracker.addEventListener("scroll", () => {
+//   if (!ticking) {
+//     window.requestAnimationFrame(() => {
+//       topRow.style.height = `${BASE_TOP_HEIGHT + scrollTracker.scrollTop}px`;
+//       clearText();
+//       populateText();
+//       main.scrollTop = scrollTracker.scrollTop;
 
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
+//       ticking = false;
+//     });
+//     ticking = true;
+//   }
+// });
 
 window.addEventListener("resize", () => {
   clearText();
   populateText();
 
-  requestAnimationFrame(() => {
-    scrollSpacer.style.height = main.scrollHeight + "px";
-  });
+  // requestAnimationFrame(() => {
+  //   scrollSpacer.style.height = main.scrollHeight + "px";
+  // });
 });
+
+let intervalId = null;
+
+function startTimer() {
+  if (intervalId !== null) return;
+
+  intervalId = setInterval(() => {
+    offset++;
+    clearText();
+    populateText();
+  }, 1000);
+}
+
+startTimer();
+
+function stopTimer() {
+  clearInterval(intervalId);
+  intervalId = null;
+}
