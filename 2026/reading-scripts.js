@@ -77,16 +77,24 @@ const text = [
 ];
 
 const scrollTracker = document.querySelector(".scroll-tracker");
+const scrollSpacer = document.querySelector(".scroll-spacer");
+const main = document.querySelector("main");
 const topRow = document.querySelector(".top-row");
 const leftCol = document.querySelector(".left-col");
 const imgContainer = document.querySelector(".img-container");
 const rightCol = document.querySelector(".right-col");
 const bottomRow = document.querySelector(".bottom-row");
 
+const infoCol = document.querySelector(".info-column");
+
+requestAnimationFrame(() => {
+  scrollSpacer.style.height = main.scrollHeight + "px";
+});
 const boxArr = [topRow, leftCol, rightCol, bottomRow];
 
 // 1. Fixed baseline height in px (8rem = 128px)
 const BASE_TOP_HEIGHT = 128;
+const BASE_SIDE_HEIGHT = 256;
 
 const clearText = () => {
   for (let i = 0; i < boxArr.length; i++) {
@@ -143,16 +151,21 @@ scrollTracker.addEventListener("scroll", () => {
   if (!ticking) {
     window.requestAnimationFrame(() => {
       topRow.style.height = `${BASE_TOP_HEIGHT + scrollTracker.scrollTop}px`;
+      clearText();
+      populateText();
+      main.scrollTop = scrollTracker.scrollTop;
+
       ticking = false;
     });
     ticking = true;
   }
-
-  clearText();
-  populateText();
 });
 
 window.addEventListener("resize", () => {
   clearText();
   populateText();
+
+  requestAnimationFrame(() => {
+    scrollSpacer.style.height = main.scrollHeight + "px";
+  });
 });

@@ -146,6 +146,7 @@ main {
     top: 5em;
     width: calc(100vw - 30em);
     height: 4.5em;
+    z-index: 5;
     background-color: var(--bg-color);
   }
 
@@ -199,7 +200,7 @@ main {
 .left-col {
   background-color: pink;
   height: 16rem;
-  width: 25%;
+  width: calc(50% - 6.4rem);
   /* grid-row: 2;
   grid-column: 1 / 2; */
 }
@@ -207,7 +208,7 @@ main {
 .right-col {
   background-color: pink;
   height: 16rem;
-  width: 25%;
+  width: calc(50% - 6.4rem);
   /* grid-row: 2;
   grid-column: 3 / 4; */
 }
@@ -252,5 +253,5 @@ main {
 /* This dummy spacer gives the user room to scroll without collapsing */
 .scroll-spacer {
   width: 100%;
-  height: 3000px; /* Adjust height based on how far you want them to scroll */
+  height: 49rem;
 }
