@@ -76,15 +76,17 @@ const text = [
   },
 ];
 
+const scrollTracker = document.querySelector(".scroll-tracker");
 const topRow = document.querySelector(".top-row");
 const leftCol = document.querySelector(".left-col");
 const imgContainer = document.querySelector(".img-container");
 const rightCol = document.querySelector(".right-col");
 const bottomRow = document.querySelector(".bottom-row");
 
-// leftCol.style.columnGap = imgContainer.getBoundingClientRect().width + "px";
-
 const boxArr = [topRow, leftCol, rightCol, bottomRow];
+
+// 1. Fixed baseline height in px (8rem = 128px)
+const BASE_TOP_HEIGHT = 128;
 
 const clearText = () => {
   for (let i = 0; i < boxArr.length; i++) {
@@ -96,36 +98,29 @@ const populateText = () => {
   let activeIdx = 0;
   let activeBox = boxArr[activeIdx];
 
+  // Set top row height directly based on current scroll track position
+  const currentScroll = scrollTracker.scrollTop;
+  topRow.style.height = `${BASE_TOP_HEIGHT + currentScroll}px`;
+
+  // Force layout flush so clientHeight reads accurately immediately
+  void topRow.offsetHeight;
+
   for (let i = 0; i < text.length; i++) {
     const textObj = text[i];
-
     let number = i + 1 < 10 ? "0" + (i + 1) : i + 1;
-    const fullText = number + " " + textObj.title + " " + textObj.author;
+    const fullText = `${number} ${textObj.title} ${textObj.author}`;
     const textArr = fullText.split(" ");
-    // const newNumber = document.createElement("h2");
-    // newNumber.classList.add("number");
-    // newNumber.textContent = number;
-    // const newTitle = document.createElement("h2");
-    // newTitle.classList.add("title");
-    // newTitle.textContent = textObj.title;
-    // const newAuthor = document.createElement("h2");
-    // newAuthor.classList.add("author");
-    // newAuthor.textContent = textObj.author;
-
-    // activeBox.appendChild(newNumber);
-    // activeBox.appendChild(newTitle);
-    // activeBox.appendChild(newAuthor);
 
     for (let j = 0; j < textArr.length; j++) {
       const newElt = document.createElement("h2");
       newElt.textContent = textArr[j];
-      console.log(textArr[j]);
       activeBox.appendChild(newElt);
 
       const filler = document.createElement("span");
       filler.classList.add("filler");
       activeBox.appendChild(filler);
 
+      // Measure overflow accurately
       if (activeBox.scrollHeight - activeBox.clientHeight > 5) {
         if (activeIdx < boxArr.length - 1) {
           activeIdx++;
@@ -136,52 +131,28 @@ const populateText = () => {
         }
       }
     }
-    // activeBox.lastElementChild.remove();
   }
 };
 
+// Initial page load render
 populateText();
 
-const populateImages = () => {
-  // const imgContainer = document.querySelector(".cd-img-container");
-  // for (let i = 0; i < text.length; i++) {
-  //   const newImg = document.createElement("img");
-  //   newImg.src = text[i].img;
-  //   newImg.alt = text[i].title;
-  //   newImg.classList.add(`no-${i + 1}`);
-  //   imgContainer.appendChild(newImg);
-  // }
-};
+// 2. LIVE expansion while user scrolls
+let ticking = false;
+scrollTracker.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      topRow.style.height = `${BASE_TOP_HEIGHT + scrollTracker.scrollTop}px`;
+      ticking = false;
+    });
+    ticking = true;
+  }
 
-populateImages();
-
-// window.addEventListener("resize", () => {
-//   const textContainer = document.querySelector(".text-container");
-//   textContainer.replaceChildren();
-//   populateText();
-
-//   if (window.innerWidth <= 768) {
-//     inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
-//   } else {
-//     inset = "calc(min(100vw - 2em, 100dvh - 5em) - 4em";
-//   }
-
-//   if (window.innerWidth >= 768) {
-//     root.style.setProperty(
-//       "--hover-blocker-dim",
-//       `${inset} - 2em - ${ringIndex * 1.85}em)`,
-//     );
-//   } else {
-//     root.style.setProperty(
-//       "--hover-blocker-dim",
-//       `${inset} - 2em - ${ringIndex * 1.55}em)`,
-//     );
-//   }
-// });
+  clearText();
+  populateText();
+});
 
 window.addEventListener("resize", () => {
   clearText();
   populateText();
 });
-
-window.addEventListener("scroll", () => {});
