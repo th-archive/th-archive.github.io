@@ -100,6 +100,19 @@ const clearText = () => {
 };
 
 let offset = 0;
+const populateImgs = () => {
+  for (let j = offset; j < text.length + offset; j++) {
+    const i = j % text.length;
+    const newEntryI = document.createElement("img");
+    newEntryI.classList.add(`no-${i}`);
+    newEntryI.src = text[i].img;
+    newEntryI.alt = text[i].title;
+    imgContainer.appendChild(newEntryI);
+  }
+};
+
+populateImgs();
+
 const populateText = () => {
   let activeIdx = 0;
   let activeBox = boxArr[activeIdx];
@@ -123,14 +136,12 @@ const populateText = () => {
       newElt.classList.add(`no-${i}`);
       newElt.addEventListener("mouseenter", () => {
         const sameNo = document.querySelectorAll(`.no-${i}`);
-        console.log(sameNo.length);
         for (let k = 0; k < sameNo.length; k++) {
           sameNo[k].classList.add("highlighted");
         }
       });
       newElt.addEventListener("mouseleave", () => {
         const sameNo = document.querySelectorAll(`.no-${i}`);
-        console.log(sameNo.length);
         for (let k = 0; k < sameNo.length; k++) {
           sameNo[k].classList.remove("highlighted");
         }
@@ -141,6 +152,18 @@ const populateText = () => {
       const filler = document.createElement("span");
       filler.classList.add(`no-${i}`);
       filler.classList.add("filler");
+      filler.addEventListener("mouseenter", () => {
+        const sameNo = document.querySelectorAll(`.no-${i}`);
+        for (let k = 0; k < sameNo.length; k++) {
+          sameNo[k].classList.add("highlighted");
+        }
+      });
+      filler.addEventListener("mouseleave", () => {
+        const sameNo = document.querySelectorAll(`.no-${i}`);
+        for (let k = 0; k < sameNo.length; k++) {
+          sameNo[k].classList.remove("highlighted");
+        }
+      });
       activeBox.appendChild(filler);
 
       // Measure overflow accurately

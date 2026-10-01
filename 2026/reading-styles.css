@@ -187,11 +187,13 @@ main {
   h2,
   span {
     opacity: 0.5;
+    transition: 0.25s ease opacity;
   }
 
   h2.highlighted,
   span.highlighted {
     opacity: 1;
+    transition: 0.25s ease opacity;
   }
 }
 
@@ -230,10 +232,27 @@ main {
 .img-container {
   aspect-ratio: 4/5;
   height: 16rem;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   /* opacity: 0.1;
   grid-row: 2;
   grid-column: 2; */
+
+  img {
+    transition: 0.25s ease opacity;
+    position: absolute;
+    width: 100%;
+    padding: 1em;
+    height: 100%;
+    object-fit: contain;
+    margin: auto;
+    height: 100%;
+    opacity: 0;
+  }
+
+  img.highlighted {
+    opacity: 1;
+    transition: 0.25s ease opacity;
+  }
 }
 
 .filler {
