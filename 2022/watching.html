@@ -1,905 +1,1068 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>watching &#8226; 2022</title>
-	<link rel="shortcut icon" type="image/jpg" href="../Artboard 1.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="../Artboard 1.png" />
     <!-- Bootstrap -->
-	<link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
-	<link href="watching-styles.css" rel="stylesheet" type="text/css">
-	<script src="watching-scripts.js"></script>
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="watching-styles.css" rel="stylesheet" type="text/css" />
+    <script src="watching-scripts.js"></script>
   </head>
   <body>
-	  <div class="container-fluid">
-		  <div class="row flex-nowrap">
-			  <div class="col-4 left menu">
-				  <a href="listening.html"><p>listening</p></a>
-				  <a href="reading.html"><p>reading</p></a>
-			  </div>
-			  <div class="col-4 middle menu">
-				  <h1><a href="../2021/watching.html" class="left">&#9756; &nbsp;</a><a href="index.html">2022</a> <a href="../2023/watching.html" class="right"> &nbsp; &#9758;</a></h1>
-			  </div>
-			  <div class="col-4 right menu">
-				  <a href="../index.html"><p>archive</p></a>
-				  <a href="https://huang-tiffany.github.io/" target="_blank"><p>me</p></a>
-			  </div>
-		  </div>
-	  </div>
-	  <main>
-		  <div class="container-fluid tabs">
-			  <div class="row flex-nowrap">
-				  <div class="col-1 arrow-left">
-					  <p class="instructions">scroll and hover across the screen to reveal this year's watchings. <br> &#8595;</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('1')" onmouseout="hide('1')">	  
-						<p>1</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('2')" onmouseout="hide('2')">
-						<p>2</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('3')" onmouseout="hide('3')">
-						<p>3</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('4')" onmouseout="hide('4')">
-						<p>4</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('5')" onmouseout="hide('5')">
-						<p>5</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('6')" onmouseout="hide('6')">
-						<p>6</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('7')" onmouseout="hide('7')">
-						<p>7</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('8')" onmouseout="hide('8')">
-						<p>8</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('9')" onmouseout="hide('9')">
-						<p>9</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('10')" onmouseout="hide('10')">
-						<p>10</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('11')" onmouseout="hide('11')">
-						<p>11</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('12')" onmouseout="hide('12')">
-						<p>12</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('13')" onmouseout="hide('13')">
-						<p>13</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('14')" onmouseout="hide('14')">
-						<p>14</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('15')" onmouseout="hide('15')">
-						<p>15</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('16')" onmouseout="hide('16')">	 
-						<p>16</p> 
-				  </div>
-				  <div class="col-1" onmouseover="reveal('17')" onmouseout="hide('17')">
-						<p>17</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('18')" onmouseout="hide('18')">
-						<p>18</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('19')" onmouseout="hide('19')">
-						<p>19</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('20')" onmouseout="hide('20')">
-						<p>20</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('21')" onmouseout="hide('21')">
-						<p>21</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('22')" onmouseout="hide('22')">
-						<p>22</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('23')" onmouseout="hide('23')">
-						<p>23</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('24')" onmouseout="hide('24')">
-						<p>24</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('25')" onmouseout="hide('25')">
-						<p>25</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('26')" onmouseout="hide('26')">
-						<p>26</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('27')" onmouseout="hide('27')">
-						<p>27</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('28')" onmouseout="hide('28')">
-						<p>28</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('29')" onmouseout="hide('29')">
-						<p>29</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('30')" onmouseout="hide('30')">
-						<p>30</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('31')" onmouseout="hide('31')">
-						<p>31</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('32')" onmouseout="hide('32')">
-						<p>32</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('33')" onmouseout="hide('33')">
-						<p>33</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('34')" onmouseout="hide('34')">
-						<p>34</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('35')" onmouseout="hide('35')">	  
-						<p>35</p>
-				  </div>
-				  <div class="col-1" onmouseover="reveal('36')" onmouseout="hide('36')">	 
-						<p>36</p> 
-				  </div>
-				  <div class="col-1" onmouseover="reveal('37')" onmouseout="hide('37')">	 
-						<p>37</p> 
-				  </div>
-				  <div class="col-1" onmouseover="reveal('38')" onmouseout="hide('38')">	 
-						<p>38</p> 
-				  </div>
-				  <div class="col-1" onmouseover="reveal('39')" onmouseout="hide('39')">	
-						<p>39</p>  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('40')" onmouseout="hide('40')">
-						<p>40</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('41')" onmouseout="hide('41')">
-						<p>41</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('42')" onmouseout="hide('42')">
-						<p>42</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('43')" onmouseout="hide('43')">
-						<p>43</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('44')" onmouseout="hide('44')">
-						<p>44</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('45')" onmouseout="hide('45')">
-						<p>45</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('46')" onmouseout="hide('46')">
-						<p>46</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('47')" onmouseout="hide('47')">
-						<p>47</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('48')" onmouseout="hide('48')">
-						<p>48</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('49')" onmouseout="hide('49')">
-						<p>49</p>	  
-				  </div>
-				  <div class="col-1" onmouseover="reveal('50')" onmouseout="hide('50')">
-						<p>50</p>	  
-				  </div>
-				  <div class="col-1 arrow-right">
-					  <p class="instructions">scroll and hover across the screen to reveal this year's watchings. <br> &#8595;</p>
-				  </div>
-			  </div>
-		  </div>
-		  <div class="content">
-			  <div class="info" id="1">
-				  <div class="p">
-					  <p><sub>1</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BY2QzODA5OTQtYWJlNi00ZjIzLThhNTItMDMwODhlYzYzMjA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="My Hero Academia">
-				  </div>
-				  <div class="p">
-					  <p>My Hero Academia</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; BONES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="2">
-				  <div class="p">
-					  <p><sub>2</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMjhhNWFjNzctYTJjOS00MDc0LThiNjItZmM0ZDVmMWViY2UzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Don't Look Up">
-				  </div>
-				  <div class="p">
-					  <p>Don't Look Up</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; HYPEROBJECT INDUSTRIES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="3">
-				  <div class="p">
-					  <p><sub>3</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZGI5OTU4MWQtMDE4ZS00ZWViLTk2OTItMmU5ZmRlNzg1N2Y5XkEyXkFqcGdeQXVyMzc3MTE2Mzg@._V1_FMjpg_UX1000_.jpg" alt="If Anything Happens I Love You">
-				  </div>
-				  <div class="p">
-					  <p>If Anything Happens I Love You</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>SHORT FILM &#8226; GILBERT FILMS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="4">
-				  <div class="p">
-					  <p><sub>4</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTA1NDQ3NTcyOTNeQTJeQWpwZ15BbWU3MDA0MzA4MzE@._V1_.jpg" alt="Pride and Prejudice">
-				  </div>
-				  <div class="p">
-					  <p>Pride and Prejudice</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; STUDIOCANAL</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="5">
-				  <div class="p">
-					  <p><sub>5</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_FMjpg_UX1000_.jpg" alt="Love, Actually">
-				  </div>
-				  <div class="p">
-					  <p>Love Actually</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; STUDIOCANAL</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="6">
-				  <div class="p">
-					  <p><sub>6</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_.jpg" alt="Spider-Man: No Way Home">
-				  </div>
-				  <div class="p">
-					  <p>Spider-Man: No Way Home</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; MARVEL STUDIOS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="7">
-				  <div class="p">
-					  <p><sub>7</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BOGYyNGJmNzctYzZjZi00MzUzLTg3YTYtYjk0OTNjMzA1OTE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Tick, Tick... Boom!">
-				  </div>
-				  <div class="p">
-					  <p>Tick, Tick... Boom!</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; IMAGINE ENTERTAINMENT</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="8">
-				  <div class="p">
-					  <p><sub>8</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZWI1YmY1YjctNTU3MS00MDFhLTkzNjUtMDgyYTEwYTkxZWJhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="what.">
-				  </div>
-				  <div class="p">
-					  <p>what.</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>SHORT FILM &#8226; COMEDY CENTRAL RECORDS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="9">
-				  <div class="p">
-					  <p><sub>9</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_.jpg" alt="About Time">
-				  </div>
-				  <div class="p">
-					  <p>About Time</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; WORKING TITLE FILMS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="10">
-				  <div class="p">
-					  <p><sub>10</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" alt="The Shining">
-				  </div>
-				  <div class="p">
-					  <p>The Shining</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; PEREGRINE PRODUCTIONS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="11">
-				  <div class="p">
-					  <p><sub>11</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTE5OTkwYzYtNDhlNC00MzljLTk1YTktY2IxZjliZmNjMjUzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" alt="Notting Hill">
-				  </div>
-				  <div class="p">
-					  <p>Notting Hill</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; WORKING TITLE FILMS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="12">
-				  <div class="p">
-					  <p><sub>12</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTM4NjY1MDQwMl5BMl5BanBnXkFtZTcwNTI3Njg3NA@@._V1_.jpg" alt="Midnight in Paris">
-				  </div>
-				  <div class="p">
-					  <p>Midnight in Paris</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; GRAVIER PRODUCTIONS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="13">
-				  <div class="p">
-					  <p><sub>13</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BN2ViMjNkMDMtY2MwZC00YzRiLWJlY2UtNjU0YzNmMDc3NzkxXkEyXkFqcGc@._V1_.jpg" alt="Love, Simon">
-				  </div>
-				  <div class="p">
-					  <p>Love, Simon</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; FOX 2000 PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="14">
-				  <div class="p">
-					  <p><sub>14</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZmMwMDlkNTEtMmQzZS00ODQ0LWJlZmItOTgwYWMwZGM4MzFiXkEyXkFqcGc@._V1_.jpg" alt="BoJack Horseman">
-				  </div>
-				  <div class="p">
-					  <p>BoJack Horseman</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; TORNANTE TELEVISION</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="15">
-				  <div class="p">
-					  <p><sub>15</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BYTQ3MWI2MjEtM2Q3NS00YjU4LWFkZGItNDA0OTc2NjcwZWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Descendants of the Sun">
-				  </div>
-				  <div class="p">
-					  <p>Descendants of the Sun</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; KBS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="16">
-				  <div class="p">
-					  <p><sub>16</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_FMjpg_UX1000_.jpg" alt="Brooklyn Nine-Nine">
-				  </div>
-				  <div class="p">
-					  <p>Brooklyn Nine-Nine</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; FREMULON</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="17">
-				  <div class="p">
-					  <p><sub>17</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg" alt="Jojo Rabbit">
-				  </div>
-				  <div class="p">
-					  <p>Jojo Rabbit</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; FOX SEARCHLIGHT PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="18">
-				  <div class="p">
-					  <p><sub>18</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_FMjpg_UX1000_.jpg" alt="The Imitation Game">
-				  </div>
-				  <div class="p">
-					  <p>The Imitation Game</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; BLACK BEAR PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="19">
-				  <div class="p">
-					  <p><sub>19</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_FMjpg_UX1000_.jpg" alt="Everything Everywhere All At Once">
-				  </div>
-				  <div class="p">
-					  <p>Everything Everywhere All At Once</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; A24</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="20">
-				  <div class="p">
-					  <p><sub>20</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BNWVjOWQ1YzEtMDVhNS00MTk1LTg1MGQtMzgyYzE5Mzc5ZWVlXkEyXkFqcGc@._V1_.jpg" alt="Cha Cha Real Smooth">
-				  </div>
-				  <div class="p">
-					  <p>Cha Cha Real Smooth</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; TEATIME PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="21">
-				  <div class="p">
-					  <p><sub>21</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMmVhYWEzMGEtZjhkYS00ZWE0LTlhOWQtZTRlODZlMTM0Y2JmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Marcel the Shell with Shoes On">
-				  </div>
-				  <div class="p">
-					  <p>Marcel the Shell with Shoes On</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; A24</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="22">
-				  <div class="p">
-					  <p><sub>22</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMWE3MjViNWUtY2VjYS00ZDBjLTllMzYtN2FkY2QwYmRiMDhjXkEyXkFqcGdeQXVyODQzNTE3ODc@._V1_.jpg" alt="The Farewell">
-				  </div>
-				  <div class="p">
-					  <p>The Farewell</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; A24</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="23">
-				  <div class="p">
-					  <p><sub>23</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTUxMzk0NDg1MV5BMl5BanBnXkFtZTgwNDg0NjkxMDI@._V1_.jpg" alt="Lost in Translation">
-				  </div>
-				  <div class="p">
-					  <p>Lost in Translation</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; AMERICAN ZOETROPE</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="24">
-				  <div class="p">
-					  <p><sub>24</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZDQyNjAwNjUtOWY4YS00YWMxLWFjMWEtZmNmOTk1NTA1NzA5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Our Times">
-				  </div>
-				  <div class="p">
-					  <p>Our Times</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; FOCUS FILMS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="25">
-				  <div class="p">
-					  <p><sub>25</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Death Note">
-				  </div>
-				  <div class="p">
-					  <p>Death Note</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; MADHOUSE</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="26">
-				  <div class="p">
-					  <p><sub>26</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BM2MzMGRlN2QtM2FhMS00Y2FhLWE4MTEtMGNiZTU5YTdiY2JiXkEyXkFqcGc@._V1_.jpg" alt="Toilet-Bound Hanako-kun">
-				  </div>
-				  <div class="p">
-					  <p>Toilet-Bound Hanako-kun</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; LERCHE</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="27">
-				  <div class="p">
-					  <p><sub>27</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Demon Slayer">
-				  </div>
-				  <div class="p">
-					  <p>Demon Slayer</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; UFOTABLE</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="28">
-				  <div class="p">
-					  <p><sub>28</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTU1NmYwMTAtNzNjOS00NDNkLWI0ZmMtMDYxYWEyYzIxYTNjXkEyXkFqcGdeQXVyNjA1MTI4NjA@._V1_.jpg" alt="Heartstopper">
-				  </div>
-				  <div class="p">
-					  <p>Heartstopper</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; SEE-SAW FILMS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="29">
-				  <div class="p">
-					  <p><sub>29</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BOWJhYjdjNWEtMWFmNC00ZjNkLThlZGEtN2NkM2U3NTVmMjZkXkEyXkFqcGc@._V1_.jpg" alt="Arcane">
-				  </div>
-				  <div class="p">
-					  <p>Arcane</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; FORTICHE</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="30">
-				  <div class="p">
-					  <p><sub>30</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BY2NjMmMzNWYtMTc3My00YmJhLThhMTYtNTliNjBiZDMwZTZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Showa Genroku Rakugo Shinju">
-				  </div>
-				  <div class="p">
-					  <p>Showa Genroku Rakugo Shinju</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; STUDIO DEEN</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="31">
-				  <div class="p">
-					  <p><sub>31</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BYWIwZjhkMzgtOWExYi00ZGIwLTg1ZTktNjQyZWIxYWFmZTc0XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg" alt="Mob Psycho 100">
-				  </div>
-				  <div class="p">
-					  <p>Mob Psycho 100</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; BONES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="32">
-				  <div class="p">
-					  <p><sub>32</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BOTAwZTQ0ZGYtOGFhNi00YWQ2LTliOTQtZTNhZDJjNzMxZDdmXkEyXkFqcGc@._V1_.jpg" alt="Our Beloved Summer">
-				  </div>
-				  <div class="p">
-					  <p>Our Beloved Summer</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; STUDIO N</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="33">
-				  <div class="p">
-					  <p><sub>33</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BNTk4MWYwNmUtODFjNC00NWJhLWExNGYtMGU4YmRlNzEwOTY1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Code Geass">
-				  </div>
-				  <div class="p">
-					  <p>Code Geass</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; SUNRISE</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="34">
-				  <div class="p">
-					  <p><sub>34</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Attack on Titan">
-				  </div>
-				  <div class="p">
-					  <p>Attack on Titan</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; MAPPA</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="35">
-				  <div class="p">
-					  <p><sub>35</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZDc3NGQ3ZWQtYjNkOC00MjhiLTg2N2YtNmZlOGNiZTFkOWNhXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_.jpg" alt="JoJo's Bizarre Adventure">
-				  </div>
-				  <div class="p">
-					  <p>JoJo's Bizarre Adventure</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; DAVID PRODUCTION</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="36">
-				  <div class="p">
-					  <p><sub>36</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMmVhZjhlZDYtMDAwZi00MDcyLTgzOTItOWNiZjY0YmE0MGE0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg" alt="10 Things I Hate About You">
-				  </div>
-				  <div class="p">
-					  <p>10 Things I Hate About You</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; TOUCHSTONE PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="37">
-				  <div class="p">
-					  <p><sub>37</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMzcwYjEwMzEtZTZmMi00ZGFhLWJhZjItMDAzNDVkNjZmM2U5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="The Princess Diaries">
-				  </div>
-				  <div class="p">
-					  <p>The Princess Diaries</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; WALT DISNEY PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="38">
-				  <div class="p">
-					  <p><sub>38</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BYzhjNzI0NWEtMzEyYy00OGViLThhMjctMWQxNGQ3Y2IzOTY4XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg" alt="Over the Garden Wall">
-				  </div>
-				  <div class="p">
-					  <p>Over the Garden Wall</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; CARTOON NETWORK STUDIOS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="39">
-				  <div class="p">
-					  <p><sub>39</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMzQ0ZWExNTgtMWZiNy00ODk0LTk3YWItM2NiNzZhZDUyOTZlXkEyXkFqcGc@._V1_.jpg" alt="Chungking Express">
-				  </div>
-				  <div class="p">
-					  <p>Chungking Express</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; JET TONE PRODUCTION</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="40">
-				  <div class="p">
-					  <p><sub>40</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMzI4MDg3NDEtOTg1OC00MDdjLWEzY2QtMmFmMWNlNTcxZDIxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_FMjpg_UX1000_.jpg" alt="Bros">
-				  </div>
-				  <div class="p">
-					  <p>Bros</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; GLOBAL SOLUTIONS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="41">
-				  <div class="p">
-					  <p><sub>41</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="Lady Bird">
-				  </div>
-				  <div class="p">
-					  <p>Lady Bird</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; A24</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="42">
-				  <div class="p">
-					  <p><sub>42</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZDU1MDI4NDMtNjVkNS00MmFhLTg4YzUtZjhiNDA4NTAwYmIzXkEyXkFqcGc@._V1_.jpg" alt="Soundtrack #1">
-				  </div>
-				  <div class="p">
-					  <p>Soundtrack #1</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; RED NINE PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="43">
-				  <div class="p">
-					  <p><sub>43</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BYzlkNjU0NzUtMmNkNi00OTBiLWEyN2YtNjkxNzc0ODhkYjExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="First Love">
-				  </div>
-				  <div class="p">
-					  <p>First Love</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; NETFLIX ORIGINALS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="44">
-				  <div class="p">
-					  <p><sub>44</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BZjdjOWIxMDgtYTgwNS00MjE4LTliZWYtZGI1NDhhZmIyYjM1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="After Life">
-				  </div>
-				  <div class="p">
-					  <p>After Life</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; DEREK PRODUCTIONS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="45">
-				  <div class="p">
-					  <p><sub>45</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BNTE1MmZhNDQtOTlkZi00Y2M0LTlhZWItYzMxZmUyY2EzNjM4XkEyXkFqcGc@._V1_.jpg" alt="Little Forest">
-				  </div>
-				  <div class="p">
-					  <p>Little Forest</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; WATERMELON PICTURES</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="46">
-				  <div class="p">
-					  <p><sub>46</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BNWY3M2NmNDAtYTllMy00ZmFhLTkxMWUtNzU1MDJiYWQ1ZjNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Love Letter">
-				  </div>
-				  <div class="p">
-					  <p>Love Letter</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; FUJI TV</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="47">
-				  <div class="p">
-					  <p><sub>47</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTU4MTQ2MzA1Ml5BMl5BanBnXkFtZTcwODE3NTgwNA@@._V1_.jpg" alt="Blue Valentine">
-				  </div>
-				  <div class="p">
-					  <p>Blue Valentine</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; HUNTING LANE FILMS</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="48">
-				  <div class="p">
-					  <p><sub>48</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMjUxMzE4ZDctODNjMS00MzIwLThjNDktODkwYjc5YWU0MDc0XkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_FMjpg_UX1000_.jpg" alt="Steins;Gate">
-				  </div>
-				  <div class="p">
-					  <p>Steins;Gate</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; WHITE FOX</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="49">
-				  <div class="p">
-					  <p><sub>49</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMTIwYTQ4ZjMtNzJiNy00ZWE5LWI0NzUtOWQ4NmM4ZjQ0ZTQwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="His and Her Circumstances">
-				  </div>
-				  <div class="p">
-					  <p>His and Her Circumstances</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>TV SHOW &#8226; GAINAX</sup></p>
-				  </div>
-			  </div>
-			  <div class="info" id="50">
-				  <div class="p">
-					  <p><sub>50</sub></p>
-				  </div>
-				  <div class="img-container">
-					  <img src="https://m.media-amazon.com/images/M/MV5BMjExMzUxNDgwMl5BMl5BanBnXkFtZTgwOTk2MzM3MjI@._V1_.jpg" alt="Columbus">
-				  </div>
-				  <div class="p">
-					  <p>Columbus</p>
-				  </div>
-				  <div class="p">
-					  <p><sup>MOVIE &#8226; DEPTH OF FIELD</sup></p>
-				  </div>
-			  </div>
-		  </div>
-	  </main>
-	  
-	  
-  	<!-- body code goes here -->
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <div class="col-4 left menu">
+          <a href="listening.html"><p>listening</p></a>
+          <a href="reading.html"><p>reading</p></a>
+        </div>
+        <div class="col-4 middle menu">
+          <h1>
+            <a href="../2021/watching.html" class="left">&#9756; &nbsp;</a
+            ><a href="index.html">2022</a>
+            <a href="../2023/watching.html" class="right"> &nbsp; &#9758;</a>
+          </h1>
+        </div>
+        <div class="col-4 right menu">
+          <a href="../index.html"><p>archive</p></a>
+          <a href="https://huang-tiffany.github.io/" target="_blank"
+            ><p>me</p></a
+          >
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="container-fluid tabs">
+        <div class="row flex-nowrap">
+          <div class="col-1 arrow-left">
+            <p class="instructions">
+              scroll and hover across the screen to reveal this year's
+              watchings. <br />
+              &#8595;
+            </p>
+          </div>
+          <div class="col-1" onmouseover="reveal('1')" onmouseout="hide('1')">
+            <p>1</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('2')" onmouseout="hide('2')">
+            <p>2</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('3')" onmouseout="hide('3')">
+            <p>3</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('4')" onmouseout="hide('4')">
+            <p>4</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('5')" onmouseout="hide('5')">
+            <p>5</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('6')" onmouseout="hide('6')">
+            <p>6</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('7')" onmouseout="hide('7')">
+            <p>7</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('8')" onmouseout="hide('8')">
+            <p>8</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('9')" onmouseout="hide('9')">
+            <p>9</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('10')" onmouseout="hide('10')">
+            <p>10</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('11')" onmouseout="hide('11')">
+            <p>11</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('12')" onmouseout="hide('12')">
+            <p>12</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('13')" onmouseout="hide('13')">
+            <p>13</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('14')" onmouseout="hide('14')">
+            <p>14</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('15')" onmouseout="hide('15')">
+            <p>15</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('16')" onmouseout="hide('16')">
+            <p>16</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('17')" onmouseout="hide('17')">
+            <p>17</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('18')" onmouseout="hide('18')">
+            <p>18</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('19')" onmouseout="hide('19')">
+            <p>19</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('20')" onmouseout="hide('20')">
+            <p>20</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('21')" onmouseout="hide('21')">
+            <p>21</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('22')" onmouseout="hide('22')">
+            <p>22</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('23')" onmouseout="hide('23')">
+            <p>23</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('24')" onmouseout="hide('24')">
+            <p>24</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('25')" onmouseout="hide('25')">
+            <p>25</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('26')" onmouseout="hide('26')">
+            <p>26</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('27')" onmouseout="hide('27')">
+            <p>27</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('28')" onmouseout="hide('28')">
+            <p>28</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('29')" onmouseout="hide('29')">
+            <p>29</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('30')" onmouseout="hide('30')">
+            <p>30</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('31')" onmouseout="hide('31')">
+            <p>31</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('32')" onmouseout="hide('32')">
+            <p>32</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('33')" onmouseout="hide('33')">
+            <p>33</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('34')" onmouseout="hide('34')">
+            <p>34</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('35')" onmouseout="hide('35')">
+            <p>35</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('36')" onmouseout="hide('36')">
+            <p>36</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('37')" onmouseout="hide('37')">
+            <p>37</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('38')" onmouseout="hide('38')">
+            <p>38</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('39')" onmouseout="hide('39')">
+            <p>39</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('40')" onmouseout="hide('40')">
+            <p>40</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('41')" onmouseout="hide('41')">
+            <p>41</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('42')" onmouseout="hide('42')">
+            <p>42</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('43')" onmouseout="hide('43')">
+            <p>43</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('44')" onmouseout="hide('44')">
+            <p>44</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('45')" onmouseout="hide('45')">
+            <p>45</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('46')" onmouseout="hide('46')">
+            <p>46</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('47')" onmouseout="hide('47')">
+            <p>47</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('48')" onmouseout="hide('48')">
+            <p>48</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('49')" onmouseout="hide('49')">
+            <p>49</p>
+          </div>
+          <div class="col-1" onmouseover="reveal('50')" onmouseout="hide('50')">
+            <p>50</p>
+          </div>
+          <div class="col-1 arrow-right">
+            <p class="instructions">
+              scroll and hover across the screen to reveal this year's
+              watchings. <br />
+              &#8595;
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="info" id="1">
+          <div class="p">
+            <p><sub>1</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BY2QzODA5OTQtYWJlNi00ZjIzLThhNTItMDMwODhlYzYzMjA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="My Hero Academia"
+            />
+          </div>
+          <div class="p">
+            <p>My Hero Academia</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; BONES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="2">
+          <div class="p">
+            <p><sub>2</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMjhhNWFjNzctYTJjOS00MDc0LThiNjItZmM0ZDVmMWViY2UzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Don't Look Up"
+            />
+          </div>
+          <div class="p">
+            <p>Don't Look Up</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; HYPEROBJECT INDUSTRIES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="3">
+          <div class="p">
+            <p><sub>3</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZGI5OTU4MWQtMDE4ZS00ZWViLTk2OTItMmU5ZmRlNzg1N2Y5XkEyXkFqcGdeQXVyMzc3MTE2Mzg@._V1_FMjpg_UX1000_.jpg"
+              alt="If Anything Happens I Love You"
+            />
+          </div>
+          <div class="p">
+            <p>If Anything Happens I Love You</p>
+          </div>
+          <div class="p">
+            <p><sup>SHORT FILM &#8226; GILBERT FILMS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="4">
+          <div class="p">
+            <p><sub>4</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTA1NDQ3NTcyOTNeQTJeQWpwZ15BbWU3MDA0MzA4MzE@._V1_.jpg"
+              alt="Pride and Prejudice"
+            />
+          </div>
+          <div class="p">
+            <p>Pride and Prejudice</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; STUDIOCANAL</sup></p>
+          </div>
+        </div>
+        <div class="info" id="5">
+          <div class="p">
+            <p><sub>5</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_FMjpg_UX1000_.jpg"
+              alt="Love, Actually"
+            />
+          </div>
+          <div class="p">
+            <p>Love Actually</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; STUDIOCANAL</sup></p>
+          </div>
+        </div>
+        <div class="info" id="6">
+          <div class="p">
+            <p><sub>6</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_.jpg"
+              alt="Spider-Man: No Way Home"
+            />
+          </div>
+          <div class="p">
+            <p>Spider-Man: No Way Home</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; MARVEL STUDIOS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="7">
+          <div class="p">
+            <p><sub>7</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BOGYyNGJmNzctYzZjZi00MzUzLTg3YTYtYjk0OTNjMzA1OTE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Tick, Tick... Boom!"
+            />
+          </div>
+          <div class="p">
+            <p>Tick, Tick... Boom!</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; IMAGINE ENTERTAINMENT</sup></p>
+          </div>
+        </div>
+        <div class="info" id="8">
+          <div class="p">
+            <p><sub>8</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZWI1YmY1YjctNTU3MS00MDFhLTkzNjUtMDgyYTEwYTkxZWJhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+              alt="what."
+            />
+          </div>
+          <div class="p">
+            <p>what.</p>
+          </div>
+          <div class="p">
+            <p><sup>SHORT FILM &#8226; COMEDY CENTRAL RECORDS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="9">
+          <div class="p">
+            <p><sub>9</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_.jpg"
+              alt="About Time"
+            />
+          </div>
+          <div class="p">
+            <p>About Time</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; WORKING TITLE FILMS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="10">
+          <div class="p">
+            <p><sub>10</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
+              alt="The Shining"
+            />
+          </div>
+          <div class="p">
+            <p>The Shining</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; PEREGRINE PRODUCTIONS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="11">
+          <div class="p">
+            <p><sub>11</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTE5OTkwYzYtNDhlNC00MzljLTk1YTktY2IxZjliZmNjMjUzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
+              alt="Notting Hill"
+            />
+          </div>
+          <div class="p">
+            <p>Notting Hill</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; WORKING TITLE FILMS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="12">
+          <div class="p">
+            <p><sub>12</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTM4NjY1MDQwMl5BMl5BanBnXkFtZTcwNTI3Njg3NA@@._V1_.jpg"
+              alt="Midnight in Paris"
+            />
+          </div>
+          <div class="p">
+            <p>Midnight in Paris</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; GRAVIER PRODUCTIONS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="13">
+          <div class="p">
+            <p><sub>13</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BN2ViMjNkMDMtY2MwZC00YzRiLWJlY2UtNjU0YzNmMDc3NzkxXkEyXkFqcGc@._V1_.jpg"
+              alt="Love, Simon"
+            />
+          </div>
+          <div class="p">
+            <p>Love, Simon</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; FOX 2000 PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="14">
+          <div class="p">
+            <p><sub>14</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZmMwMDlkNTEtMmQzZS00ODQ0LWJlZmItOTgwYWMwZGM4MzFiXkEyXkFqcGc@._V1_.jpg"
+              alt="BoJack Horseman"
+            />
+          </div>
+          <div class="p">
+            <p>BoJack Horseman</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; TORNANTE TELEVISION</sup></p>
+          </div>
+        </div>
+        <div class="info" id="15">
+          <div class="p">
+            <p><sub>15</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYTQ3MWI2MjEtM2Q3NS00YjU4LWFkZGItNDA0OTc2NjcwZWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Descendants of the Sun"
+            />
+          </div>
+          <div class="p">
+            <p>Descendants of the Sun</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; KBS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="16">
+          <div class="p">
+            <p><sub>16</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_FMjpg_UX1000_.jpg"
+              alt="Brooklyn Nine-Nine"
+            />
+          </div>
+          <div class="p">
+            <p>Brooklyn Nine-Nine</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; FREMULON</sup></p>
+          </div>
+        </div>
+        <div class="info" id="17">
+          <div class="p">
+            <p><sub>17</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg"
+              alt="Jojo Rabbit"
+            />
+          </div>
+          <div class="p">
+            <p>Jojo Rabbit</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; FOX SEARCHLIGHT PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="18">
+          <div class="p">
+            <p><sub>18</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_FMjpg_UX1000_.jpg"
+              alt="The Imitation Game"
+            />
+          </div>
+          <div class="p">
+            <p>The Imitation Game</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; BLACK BEAR PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="19">
+          <div class="p">
+            <p><sub>19</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_FMjpg_UX1000_.jpg"
+              alt="Everything Everywhere All At Once"
+            />
+          </div>
+          <div class="p">
+            <p>Everything Everywhere All At Once</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; A24</sup></p>
+          </div>
+        </div>
+        <div class="info" id="20">
+          <div class="p">
+            <p><sub>20</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNWVjOWQ1YzEtMDVhNS00MTk1LTg1MGQtMzgyYzE5Mzc5ZWVlXkEyXkFqcGc@._V1_.jpg"
+              alt="Cha Cha Real Smooth"
+            />
+          </div>
+          <div class="p">
+            <p>Cha Cha Real Smooth</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; TEATIME PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="21">
+          <div class="p">
+            <p><sub>21</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMmVhYWEzMGEtZjhkYS00ZWE0LTlhOWQtZTRlODZlMTM0Y2JmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Marcel the Shell with Shoes On"
+            />
+          </div>
+          <div class="p">
+            <p>Marcel the Shell with Shoes On</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; A24</sup></p>
+          </div>
+        </div>
+        <div class="info" id="22">
+          <div class="p">
+            <p><sub>22</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMWE3MjViNWUtY2VjYS00ZDBjLTllMzYtN2FkY2QwYmRiMDhjXkEyXkFqcGdeQXVyODQzNTE3ODc@._V1_.jpg"
+              alt="The Farewell"
+            />
+          </div>
+          <div class="p">
+            <p>The Farewell</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; A24</sup></p>
+          </div>
+        </div>
+        <div class="info" id="23">
+          <div class="p">
+            <p><sub>23</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTUxMzk0NDg1MV5BMl5BanBnXkFtZTgwNDg0NjkxMDI@._V1_.jpg"
+              alt="Lost in Translation"
+            />
+          </div>
+          <div class="p">
+            <p>Lost in Translation</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; AMERICAN ZOETROPE</sup></p>
+          </div>
+        </div>
+        <div class="info" id="24">
+          <div class="p">
+            <p><sub>24</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZDQyNjAwNjUtOWY4YS00YWMxLWFjMWEtZmNmOTk1NTA1NzA5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Our Times"
+            />
+          </div>
+          <div class="p">
+            <p>Our Times</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; FOCUS FILMS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="25">
+          <div class="p">
+            <p><sub>25</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Death Note"
+            />
+          </div>
+          <div class="p">
+            <p>Death Note</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; MADHOUSE</sup></p>
+          </div>
+        </div>
+        <div class="info" id="26">
+          <div class="p">
+            <p><sub>26</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BM2MzMGRlN2QtM2FhMS00Y2FhLWE4MTEtMGNiZTU5YTdiY2JiXkEyXkFqcGc@._V1_.jpg"
+              alt="Toilet-Bound Hanako-kun"
+            />
+          </div>
+          <div class="p">
+            <p>Toilet-Bound Hanako-kun</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; LERCHE</sup></p>
+          </div>
+        </div>
+        <div class="info" id="27">
+          <div class="p">
+            <p><sub>27</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Demon Slayer"
+            />
+          </div>
+          <div class="p">
+            <p>Demon Slayer</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; UFOTABLE</sup></p>
+          </div>
+        </div>
+        <div class="info" id="28">
+          <div class="p">
+            <p><sub>28</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjm4U-sEJV9ikzJEPid3BEPRuhRerpGqIAq00W78mk3YqC1_n3oGbe780&s=10"
+              alt="Heartstopper"
+            />
+          </div>
+          <div class="p">
+            <p>Heartstopper</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; SEE-SAW FILMS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="29">
+          <div class="p">
+            <p><sub>29</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BOWJhYjdjNWEtMWFmNC00ZjNkLThlZGEtN2NkM2U3NTVmMjZkXkEyXkFqcGc@._V1_.jpg"
+              alt="Arcane"
+            />
+          </div>
+          <div class="p">
+            <p>Arcane</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; FORTICHE</sup></p>
+          </div>
+        </div>
+        <div class="info" id="30">
+          <div class="p">
+            <p><sub>30</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BY2NjMmMzNWYtMTc3My00YmJhLThhMTYtNTliNjBiZDMwZTZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Showa Genroku Rakugo Shinju"
+            />
+          </div>
+          <div class="p">
+            <p>Showa Genroku Rakugo Shinju</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; STUDIO DEEN</sup></p>
+          </div>
+        </div>
+        <div class="info" id="31">
+          <div class="p">
+            <p><sub>31</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYWIwZjhkMzgtOWExYi00ZGIwLTg1ZTktNjQyZWIxYWFmZTc0XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg"
+              alt="Mob Psycho 100"
+            />
+          </div>
+          <div class="p">
+            <p>Mob Psycho 100</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; BONES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="32">
+          <div class="p">
+            <p><sub>32</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BOTAwZTQ0ZGYtOGFhNi00YWQ2LTliOTQtZTNhZDJjNzMxZDdmXkEyXkFqcGc@._V1_.jpg"
+              alt="Our Beloved Summer"
+            />
+          </div>
+          <div class="p">
+            <p>Our Beloved Summer</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; STUDIO N</sup></p>
+          </div>
+        </div>
+        <div class="info" id="33">
+          <div class="p">
+            <p><sub>33</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNTk4MWYwNmUtODFjNC00NWJhLWExNGYtMGU4YmRlNzEwOTY1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Code Geass"
+            />
+          </div>
+          <div class="p">
+            <p>Code Geass</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; SUNRISE</sup></p>
+          </div>
+        </div>
+        <div class="info" id="34">
+          <div class="p">
+            <p><sub>34</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Attack on Titan"
+            />
+          </div>
+          <div class="p">
+            <p>Attack on Titan</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; MAPPA</sup></p>
+          </div>
+        </div>
+        <div class="info" id="35">
+          <div class="p">
+            <p><sub>35</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkF1p3tfDH70sdIdu-QFbNPIg_Win4ehIrJcreoyJ0Q&s=10"
+              alt="JoJo's Bizarre Adventure"
+            />
+          </div>
+          <div class="p">
+            <p>JoJo's Bizarre Adventure</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; DAVID PRODUCTION</sup></p>
+          </div>
+        </div>
+        <div class="info" id="36">
+          <div class="p">
+            <p><sub>36</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMmVhZjhlZDYtMDAwZi00MDcyLTgzOTItOWNiZjY0YmE0MGE0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
+              alt="10 Things I Hate About You"
+            />
+          </div>
+          <div class="p">
+            <p>10 Things I Hate About You</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; TOUCHSTONE PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="37">
+          <div class="p">
+            <p><sub>37</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMzcwYjEwMzEtZTZmMi00ZGFhLWJhZjItMDAzNDVkNjZmM2U5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"
+              alt="The Princess Diaries"
+            />
+          </div>
+          <div class="p">
+            <p>The Princess Diaries</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; WALT DISNEY PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="38">
+          <div class="p">
+            <p><sub>38</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYzhjNzI0NWEtMzEyYy00OGViLThhMjctMWQxNGQ3Y2IzOTY4XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+              alt="Over the Garden Wall"
+            />
+          </div>
+          <div class="p">
+            <p>Over the Garden Wall</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; CARTOON NETWORK STUDIOS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="39">
+          <div class="p">
+            <p><sub>39</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMzQ0ZWExNTgtMWZiNy00ODk0LTk3YWItM2NiNzZhZDUyOTZlXkEyXkFqcGc@._V1_.jpg"
+              alt="Chungking Express"
+            />
+          </div>
+          <div class="p">
+            <p>Chungking Express</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; JET TONE PRODUCTION</sup></p>
+          </div>
+        </div>
+        <div class="info" id="40">
+          <div class="p">
+            <p><sub>40</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMzI4MDg3NDEtOTg1OC00MDdjLWEzY2QtMmFmMWNlNTcxZDIxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_FMjpg_UX1000_.jpg"
+              alt="Bros"
+            />
+          </div>
+          <div class="p">
+            <p>Bros</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; GLOBAL SOLUTIONS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="41">
+          <div class="p">
+            <p><sub>41</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+              alt="Lady Bird"
+            />
+          </div>
+          <div class="p">
+            <p>Lady Bird</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; A24</sup></p>
+          </div>
+        </div>
+        <div class="info" id="42">
+          <div class="p">
+            <p><sub>42</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZDU1MDI4NDMtNjVkNS00MmFhLTg4YzUtZjhiNDA4NTAwYmIzXkEyXkFqcGc@._V1_.jpg"
+              alt="Soundtrack #1"
+            />
+          </div>
+          <div class="p">
+            <p>Soundtrack #1</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; RED NINE PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="43">
+          <div class="p">
+            <p><sub>43</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYzlkNjU0NzUtMmNkNi00OTBiLWEyN2YtNjkxNzc0ODhkYjExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="First Love"
+            />
+          </div>
+          <div class="p">
+            <p>First Love</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; NETFLIX ORIGINALS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="44">
+          <div class="p">
+            <p><sub>44</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNDVkNzU5ZjAtNjE5MC00YjBmLTk0NjAtYmFiOTk3MGIwZDlmXkEyXkFqcGc@._V1_.jpg"
+              alt="After Life"
+            />
+          </div>
+          <div class="p">
+            <p>After Life</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; DEREK PRODUCTIONS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="45">
+          <div class="p">
+            <p><sub>45</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNTE1MmZhNDQtOTlkZi00Y2M0LTlhZWItYzMxZmUyY2EzNjM4XkEyXkFqcGc@._V1_.jpg"
+              alt="Little Forest"
+            />
+          </div>
+          <div class="p">
+            <p>Little Forest</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; WATERMELON PICTURES</sup></p>
+          </div>
+        </div>
+        <div class="info" id="46">
+          <div class="p">
+            <p><sub>46</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNWY3M2NmNDAtYTllMy00ZmFhLTkxMWUtNzU1MDJiYWQ1ZjNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="Love Letter"
+            />
+          </div>
+          <div class="p">
+            <p>Love Letter</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; FUJI TV</sup></p>
+          </div>
+        </div>
+        <div class="info" id="47">
+          <div class="p">
+            <p><sub>47</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTU4MTQ2MzA1Ml5BMl5BanBnXkFtZTcwODE3NTgwNA@@._V1_.jpg"
+              alt="Blue Valentine"
+            />
+          </div>
+          <div class="p">
+            <p>Blue Valentine</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; HUNTING LANE FILMS</sup></p>
+          </div>
+        </div>
+        <div class="info" id="48">
+          <div class="p">
+            <p><sub>48</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMjUxMzE4ZDctODNjMS00MzIwLThjNDktODkwYjc5YWU0MDc0XkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_FMjpg_UX1000_.jpg"
+              alt="Steins;Gate"
+            />
+          </div>
+          <div class="p">
+            <p>Steins;Gate</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; WHITE FOX</sup></p>
+          </div>
+        </div>
+        <div class="info" id="49">
+          <div class="p">
+            <p><sub>49</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMTIwYTQ4ZjMtNzJiNy00ZWE5LWI0NzUtOWQ4NmM4ZjQ0ZTQwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+              alt="His and Her Circumstances"
+            />
+          </div>
+          <div class="p">
+            <p>His and Her Circumstances</p>
+          </div>
+          <div class="p">
+            <p><sup>TV SHOW &#8226; GAINAX</sup></p>
+          </div>
+        </div>
+        <div class="info" id="50">
+          <div class="p">
+            <p><sub>50</sub></p>
+          </div>
+          <div class="img-container">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BMjExMzUxNDgwMl5BMl5BanBnXkFtZTgwOTk2MzM3MjI@._V1_.jpg"
+              alt="Columbus"
+            />
+          </div>
+          <div class="p">
+            <p>Columbus</p>
+          </div>
+          <div class="p">
+            <p><sup>MOVIE &#8226; DEPTH OF FIELD</sup></p>
+          </div>
+        </div>
+      </div>
+    </main>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- body code goes here -->
 
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="../js/popper.min.js"></script> 
-	<script src="../js/bootstrap-4.4.1.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.4.1.js"></script>
   </body>
 </html>
