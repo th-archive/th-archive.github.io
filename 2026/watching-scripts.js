@@ -103,17 +103,11 @@ main.addEventListener("scroll", () => {
   const scrollTop = main.scrollTop;
   watchingImgs.style.opacity = "0";
 
-  if (scrollTop >= originalHeight || scrollTop < 0) {
-    console.log("reset");
+  if (scrollTop >= originalHeight) {
     isResetting = true;
 
     main.style.scrollSnapType = "none";
-
-    if (scrollTop >= originalHeight) {
-      main.scrollTop = scrollTop - originalHeight;
-    } else if (scrollTop < 0) {
-      main.scrollTop = originalHeight + scrollTop;
-    }
+    main.scrollTop = scrollTop - originalHeight;
 
     requestAnimationFrame(() => {
       main.style.scrollSnapType = "y proximity";
@@ -127,7 +121,6 @@ main.addEventListener("scrollend", () => {
 });
 
 main.addEventListener("scrollsnapchange", (event) => {
-  // Returns the snapped element in the block (vertical/horizontal layout dependent) direction
   let snapped = event.snapTargetBlock;
   if (main.scrollTop < 5) {
     snapped = watchingLeft.children[3];
@@ -138,6 +131,7 @@ main.addEventListener("scrollsnapchange", (event) => {
     highlightedImg.classList.remove("highlighted");
   }
 
+  if (!snapped) return;
   const img = document.querySelector(
     `#watching-imgs img.${snapped.classList[1]}`,
   );
